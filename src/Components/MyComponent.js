@@ -6,12 +6,6 @@ const MyComponent = (props) => {
 	//const { color } = props;
 	return (
 			<div className={ myContainer }>
-				<p>
-					Je viens de mon composant 
-				</p>
-				<p className="red-paragraph">
-					Mon deuxieme paragraphe
-				</p>
 			</div>
 	);
 }
