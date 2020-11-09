@@ -1,14 +1,16 @@
 import React from 'react';
-import Genre from './Genre.js'
-import GenreContainer from './GenreContainer.js'
+import Genre from './Genre'
+
 
 const DesktopHomePage = (props) => {
 	//const { color } = props;
 	return (
-
-            
 			<div >
-                <GenreContainer></GenreContainer>
+				<h2> Genres </h2>
+				<Genre></Genre>
+				<Genre></Genre>
+				<Genre></Genre>
+				<Genre></Genre>
 			</div>
 	);
 }
