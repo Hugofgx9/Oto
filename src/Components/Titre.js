@@ -6,6 +6,12 @@ const MyComponent = (props) => {
 	//const { color } = props;
 	return (
 			<div className={ myContainer }>
+				<p>
+					illustrationAlbum
+					trackName
+					albumName
+					ajouter
+				</p>
 			</div>
 	);
 }

@@ -22,3 +22,32 @@ button {
 button:focus {
   outline: 0;
 }
+
+h1{
+  font-family: 'MonumentExtended Black';
+  color: $blue;
+  font-size: 24px;
+}
+
+h2{
+  font-family: 'MonumentExtended Light';
+  color: $greyLight;
+  font-size: 16px;
+}
+
+h3{
+  font-family: 'MonumentExtended Light';
+  color: $greyLight;
+  font-size: 10px;
+}
+
+h4{
+  font-family: 'HelveticaNeue Bold';
+  color: $greyLight;
+  font-size: 14px;
+}
+p{
+  font-family: 'HelveticaNeue Regular';
+  color: $greyLight;
+  font-size: 12px;
+}
