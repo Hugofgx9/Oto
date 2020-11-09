@@ -1,5 +1,7 @@
 import MyComponent from '../Components/MyComponent.js';
 
+import '../scss/_init.scss';
+
 const App = () => {
   return (
     <div className="App">
