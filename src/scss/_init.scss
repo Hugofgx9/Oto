@@ -1,0 +1,27 @@
+@import '_font.scss';
+@import '_variables.scss';
+
+.app {
+}
+
+* {
+  font-family: 'HelveticaNeue Regular';
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+button:focus {
+  outline: 0;
+}
