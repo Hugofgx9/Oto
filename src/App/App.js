@@ -1,5 +1,4 @@
 import ArtistPageDesktop from '../Components/ArtistPageDesktop.js';
-
 import '../scss/_init.scss';
 
 const App = () => {
@@ -9,5 +8,4 @@ const App = () => {
     </div>
   );
 }
-
 export default App;

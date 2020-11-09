@@ -31,16 +31,38 @@ const MyComponent = (props) => {
 				<div className="Titres">
 					<ul>
 						<li>
-						<Titre/>
+							<Titre/>
 						</li>
-						</ul>
+						<li>
+							<Titre/>
+						</li>
+						<li>
+							<Titre/>
+						</li>
+						<li>
+							<Titre/>
+						</li>
+					</ul>
         			
     			</div>
 				<h2 className="red-paragraph">
 					Albums
 				</h2>
 				<div className="Albums">
-        			<Album/>
+					<ul>
+						<li>
+							<Album/>
+						</li>
+						<li>
+							<Album/>
+						</li>
+						<li>
+							<Album/>
+						</li>
+						<li>
+							<Album/>
+						</li>
+					</ul>
     			</div>
 				
 			</div>
