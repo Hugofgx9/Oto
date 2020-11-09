@@ -1,5 +1,5 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
+//STYLE
 import { styleDesktopLMI } from './ComponentStyle/DesktopLeftMenuItems.module.scss';
 
 const DesktopLeftMenuItems = (props) => {
