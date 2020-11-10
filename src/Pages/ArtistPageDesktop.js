@@ -1,13 +1,15 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
-import { myContainer } from './ComponentStyle/MyComponent.module.scss';
-import Titre from './Titre';
-import Album from './Album';
+import TitreArtistPage from '../Components/TitreArtistPage.js';
+import AlbumArtistPage from '../Components/AlbumArtistPage.js';
+import styles from '@pages/PagesStyle/ArtistPageDesktop.module.scss';
 
-const MyComponent = (props) => {
+console.log(styles)
+
+const ArtistPageDesktop = (props) => {
 	//const { color } = props;
 	return (
-			<div className={ myContainer }>
+			<div className = { styles.ArtistPage}>
 				<h1>
 					artisteName 
 				</h1>
@@ -23,7 +25,7 @@ const MyComponent = (props) => {
 					Dernière sortie
 				</h2>
 				<div className="Albums">
-        			<Album/>
+        			<AlbumArtistPage/>
     			</div>
 				<h2 className="red-paragraph">
 					Top titres
@@ -31,16 +33,16 @@ const MyComponent = (props) => {
 				<div className="Titres">
 					<ul>
 						<li>
-							<Titre/>
+							<TitreArtistPage/>
 						</li>
 						<li>
-							<Titre/>
+							<TitreArtistPage/>
 						</li>
 						<li>
-							<Titre/>
+							<TitreArtistPage/>
 						</li>
 						<li>
-							<Titre/>
+							<TitreArtistPage/>
 						</li>
 					</ul>
         			
@@ -51,16 +53,16 @@ const MyComponent = (props) => {
 				<div className="Albums">
 					<ul>
 						<li>
-							<Album/>
+							<AlbumArtistPage/>
 						</li>
 						<li>
-							<Album/>
+							<AlbumArtistPage/>
 						</li>
 						<li>
-							<Album/>
+							<AlbumArtistPage/>
 						</li>
 						<li>
-							<Album/>
+							<AlbumArtistPage/>
 						</li>
 					</ul>
     			</div>
@@ -69,4 +71,4 @@ const MyComponent = (props) => {
 	);
 }
 
-export default MyComponent;
+export default ArtistPageDesktop;

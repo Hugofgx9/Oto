@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 
 import DesktopHomePage from '@components/DesktopHomePage.js';
-import ArtistPageDesktop from '@components/ArtistPageDesktop.js';
+import ArtistPageDesktop from '@pages/ArtistPageDesktop.js';
 import DesktopLeftMenu from '@components/DesktopLeftMenu.js';
 import AlbumPageDesktop from '@pages/AlbumPageDesktop.js';
 

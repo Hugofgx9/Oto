@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Album = (props) => {
+const AlbumArtistPage = (props) => {
 	//const { color } = props;
 	return (
 			<div>
@@ -13,4 +13,4 @@ const Album = (props) => {
 	);
 }
 
-export default Album;
+export default AlbumArtistPage;
