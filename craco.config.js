@@ -7,6 +7,7 @@ module.exports = {
       alias: {
           '@src': path.join(path.resolve(__dirname, './src')),
           '@components': path.join(path.resolve(__dirname, './src/Components')),
+          '@pages': path.join(path.resolve(__dirname, './src/Pages')),
       }
   },
   plugins: [
