@@ -16,6 +16,8 @@ import AlbumPageDesktop from '@pages/AlbumPageDesktop.js';
 const App = () => {
   return (
     <div className="App">
+
+
     	<Router>
     		<Switch>
     			<Route exact path="/">
@@ -35,6 +37,7 @@ const App = () => {
     			</Route>
     		</Switch>
     	</Router>
+
     </div>
   );
 }
