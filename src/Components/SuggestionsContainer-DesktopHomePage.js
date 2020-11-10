@@ -3,17 +3,28 @@ import Suggestion from './ItemSuggestion-DesktopHomePage'
 
 import styles from '@pages/PagesStyle/DesktopHomePage.module.scss'
 
+let ItemSuggest = [
+	{ItemTitle: 'Rock'},
+	{ItemTitle: 'Classique'},
+	{ItemTitle: 'Electro'},
+	{ItemTitle: 'Variété'},
+]
 const DesktopHomePage = (props) => {
 	//const { color } = props;
 	return (
 			<div className={styles.SuggestContainer} >
 				<span className={styles.TitleContainer} > Suggestions </span>
-				<div className={styles.SuggestList}>
-					<Suggestion></Suggestion>
-					<Suggestion></Suggestion>
-					<Suggestion></Suggestion>
-					<Suggestion></Suggestion>
-				</div>
+				<ul className={styles.SuggestList}>
+					{ItemSuggest.map((Items) =>{
+						return (
+							<li>
+								<Suggestion
+									ItemTitle={Items.ItemTitle}
+								></Suggestion>
+							</li>
+						)
+					})}
+				</ul>
 				
 			</div>
 	);

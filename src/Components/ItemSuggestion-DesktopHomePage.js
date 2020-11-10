@@ -2,15 +2,15 @@ import React from 'react';
 
 
 const DesktopHomePage = (props) => {
-	//const { color } = props;
+	const { ImageSrc, ItemTitle } = props;
 	return (
 			<div>
 				<div>
 				
-					<img src = '' ></img>
+					<img src = '{ImageSrc}' ></img>
 				</div>
 				<span>
-					Titre Item Suggestion
+					{ItemTitle}
 				</span>
 			</div>
 	);
