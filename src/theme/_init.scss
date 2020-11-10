@@ -2,11 +2,14 @@
 @import '_variables.scss';
 
 * {
-  font-family: 'HelveticaNeue Regular';
   list-style: none;
   text-decoration: none;
   margin: 0;
   padding: 0;
+}
+
+body{
+  font-family: 'HelveticaNeue Regular';
 }
 
 a{

@@ -1,15 +1,15 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
-import { grid } from './ComponentStyle/AlbumPageSingleTitle.module.scss';
+import styles from './ComponentStyle/AlbumPageSingleTitle.module.scss';
 
 
 
 const AlbumPageSingleTitle = (props) => {
-	const { nb, title, artist, time } = props;
+	const { nb, title, artist, time, style } = props;
 	return (
-		<div className={ grid }>
+		<div className={ styles.grid } style={ style }>
 		 <span> { nb } </span>
-		 <span> { title } </span>
+		 <span className={ styles.title }> { title } </span>
 		 <span> { artist } </span>
 		 <span> { time } </span>
 		</div>

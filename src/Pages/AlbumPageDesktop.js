@@ -1,7 +1,9 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
-import { albumPage } from './ComponentStyle/DesktopAlbumPage.module.scss';
-import AlbumPageSingleTitle from './AlbumPageSingleTitle';
+import styles from '@pages/PagesStyle/DesktopAlbumPage.module.scss';
+import AlbumPageSingleTitle from '@components/AlbumPageSingleTitle';
+
+console.log(styles);
 
 let albumTrackList = [
 {title: 'Premier', artist: 'Hupsylon'},
@@ -16,17 +18,23 @@ let albumTrackList = [
 const AlbumPageDesktop = (props) => {
 	//const { color } = props;
 	return (
-			<div className={ albumPage }>
+			<div className={ styles.albumPage }>
 				<img src=""/>
+				<div className= { styles.headerMenu } >
+					<span>Morceau</span>
+					<span>Artiste</span>
+					<span>Durée</span>
+				</div>
 				<ul>
 				{albumTrackList.map((track, index) => {
 					return (
-						<AlbumPageSingleTitle 
-							key={index} 
-							nb={index} 
-							title={track.title} 
-							artist={track.artist} 
-						/>
+						<li key={index}>
+							<AlbumPageSingleTitle 	 
+								nb={index} 
+								title={track.title} 
+								artist={track.artist} 
+							/>
+						</li>
 					)
 				})}
 					

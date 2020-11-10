@@ -1,0 +1,10 @@
+.albumPage {
+	background-color: $grey2;
+	color: $white;
+
+	.headerMenu {
+		font-family: "MonumentExtended Regular";
+		display: grid;
+		grid-template-columns: 21fr 15fr 3fr;
+	}
+}
