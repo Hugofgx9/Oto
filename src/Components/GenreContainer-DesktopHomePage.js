@@ -1,16 +1,20 @@
 import React from 'react';
 import Genre from './Genre-DesktopHomePage'
 
+import styles from '@components/ComponentStyle/GenreContainer-DesktopHomePage.module.scss'
 
 const DesktopHomePage = (props) => {
 	//const { color } = props;
 	return (
 			<div >
 				<h2> Genres </h2>
-				<Genre></Genre>
-				<Genre></Genre>
-				<Genre></Genre>
-				<Genre></Genre>
+				<div className={styles.GenreList}>
+					<Genre></Genre>
+					<Genre></Genre>
+					<Genre></Genre>
+					<Genre></Genre>
+				</div>
+				
 			</div>
 	);
 }
