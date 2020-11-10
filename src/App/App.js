@@ -7,7 +7,7 @@ import AlbumPageDesktop from '../Components/AlbumPageDesktop.js';
 const App = () => {
   return (
     <div className="App">
-      <AlbumPageDesktop/>
+      <DesktopHomePage/>
     </div>
   );
 }
