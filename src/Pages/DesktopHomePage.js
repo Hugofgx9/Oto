@@ -7,9 +7,15 @@ const DesktopHomePage = (props) => {
 	//const { color } = props;
 	return (            
 			<div className={styles.DesktopHomePage} >
-                <SuggestionsContainer></SuggestionsContainer>
-				<SuggestionsContainer></SuggestionsContainer>
-				<SuggestionsContainer></SuggestionsContainer>
+				<div>
+
+				</div>
+				<div>
+                	<SuggestionsContainer></SuggestionsContainer>
+					<SuggestionsContainer></SuggestionsContainer>
+					<SuggestionsContainer></SuggestionsContainer>
+				</div>
+
 			</div>
 	);
 }

@@ -6,12 +6,12 @@ const DesktopHomePage = (props) => {
 	return (
 			<div>
 				<div>
-					Img 
+				
 					<img src = '' ></img>
 				</div>
-				<h3>
+				<span>
 					Titre Item Suggestion
-				</h3>
+				</span>
 			</div>
 	);
 }

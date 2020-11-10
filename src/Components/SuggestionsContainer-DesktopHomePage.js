@@ -6,9 +6,9 @@ import styles from '@pages/PagesStyle/DesktopHomePage.module.scss'
 const DesktopHomePage = (props) => {
 	//const { color } = props;
 	return (
-			<div >
+			<div className={styles.SuggestContainer} >
 				<span className={styles.TitleContainer} > Suggestions </span>
-				<div className={styles.GenreList}>
+				<div className={styles.SuggestList}>
 					<Suggestion></Suggestion>
 					<Suggestion></Suggestion>
 					<Suggestion></Suggestion>
