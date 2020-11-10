@@ -10,9 +10,9 @@ const ArtistPageDesktop = (props) => {
 	//const { color } = props;
 	return (
 			<div className = { styles.ArtistPage}>
-				<h1>
+				<h2 className = {styles.bigTitle}>
 					artisteName 
-				</h1>
+				</h2>
 				<div className="Bio">
         			<p>
 						Biographie de l'artiste

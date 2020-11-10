@@ -1,3 +1,6 @@
 .ArtistPage {
-	background-color: red;
+	background-color: $grey2;
+	.bigTitle {
+		color: $greyLight;
+	}
 }
