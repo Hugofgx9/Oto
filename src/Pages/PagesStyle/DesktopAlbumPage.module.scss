@@ -1,10 +1,73 @@
-.albumPage {
-	background-color: $grey2;
+.albumPageContainer {
+	margin-top: 200px;
+	margin-left: 200px;
+	margin-right: $margin;
 	color: $white;
+	display: grid;
+	grid-template-rows: auto 20px auto;
+	grid-template-columns: 1fr 3fr;
+
+	//pass to albumtracklist's props and headerMenu
+	.gridTrackList {
+		display: grid;
+		grid-template-columns: 3fr 21fr 15fr 10fr 8fr;
+	}
+
+	img {
+		height: auto;
+		width: 70%;
+		align-self: end;
+		justify-self: center;
+		grid-row: 1/3;
+	}
+
+	.albumInfo {
+		grid-column: 2;
+		grid-row: 1;
+		display: grid;
+
+		.bottomAlign {
+			align-self: end;
+			margin-bottom: 20px;
+		}
+	}
+
+	.albumInfo2{
+		width: 70%;
+		justify-self: center;
+		margin-top: 12px;
+	}
+
+	.genreAndDate h3 {
+		display: inline-block;
+	}
 
 	.headerMenu { 
-		display: grid;
-		grid-template-columns: 21fr 15fr 3fr;
+		grid-column: 2;
+		grid-row: 2;
+		color: $grey3;
+		border-bottom: solid 1px $grey3;
+		align-self: end;
+
+		span:nth-of-type(1){
+			grid-column: 1/3;
+		}
+
+		span:nth-of-type(2){
+			grid-column: 3;
+			justify-self: end;
+		}
+		span:nth-of-type(3){
+			grid-column: 5;
+			justify-self: end;
+		}
+	}
+
+	ul {
+		padding-bottom: 6px;
+		padding-top: 6px;
+		grid-column: 2;
+		grid-row: 3;
 	}
 
 	.genreAndDate h3 {

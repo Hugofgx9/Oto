@@ -10,6 +10,8 @@
 
 body{
   font-family: 'Helvetica Regular';
+  background-color: $grey2;
+  font-size: 12px;
 }
 
 a{
@@ -44,13 +46,37 @@ button:focus {
   font-size: 10px;
 }
 
-.corpTitle{
+.corpsTitle{
   font-family: 'Helvetica Bold';
   color: $greyLight;
   font-size: 14px;
 }
-.corp{
+.corps{
   font-family: 'Helvetica Regular';
   color: $greyLight;
   font-size: 12px;
+}
+
+.grey1{
+  color: $grey1;
+}
+
+.grey2{
+  color: $grey2;
+}
+
+.grey3{
+  color: $grey3;
+}
+
+.greyLight {
+  color: $greyLight;
+}
+
+.white {
+  color: $white;
+}
+
+.blue {
+  color: $blue;
 }

@@ -2,15 +2,16 @@ import React from 'react';
 
 
 const DesktopHomePage = (props) => {
-	//const { color } = props;
+	const { ImageSrc, ItemTitle } = props;
 	return (
 			<div>
 				<div>
-					Img Genre
+				
+					<img src = '{ImageSrc}' ></img>
 				</div>
-				<h3>
-					Titre Genre
-				</h3>
+				<span>
+					{ItemTitle}
+				</span>
 			</div>
 	);
 }

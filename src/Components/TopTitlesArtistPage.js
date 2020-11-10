@@ -1,5 +1,6 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
+import styles from '@components/ComponentStyle/TopTitlesArtistPage.module.scss';
 
 const TitreArtistPage = (props) => {
 	//const { color } = props;
@@ -8,10 +9,12 @@ const TitreArtistPage = (props) => {
 			<div>
 
 				<p>
-					illustrationAlbum
-					trackName
-					albumName
-					ajouter
+					illustrationAlbum 
+					 trackName 
+					<span className={styles.corps}>
+						 albumName 
+					</span>
+					 ajouter 
 				</p>
 			</div>
 	);
