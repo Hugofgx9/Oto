@@ -1,7 +1,82 @@
 .styleDesktopLM {
     position: fixed;
     background-color: $grey1;
-    height: 70vh;
-    min-height: 500px;
+    z-index: 10;
+    top: 0;
+    left: 0;
     color: $greyLight;
+  	display: grid;
+	  grid-template-columns: 220px;
+    grid-template-rows: 100px 40vh 20vh;
+    text-align: center;
+
+    .gridchild{
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      text-align: right;
+    }
+
+		.BibliothequeMenu {
+      grid-column: 1;
+      grid-row: 1;
+      // border: solid 2px $grey3;
+      padding-right: 25px;
+    }
+    .BibliothequeSeparation{
+      position: relative;
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      .rectangle{
+        width:20px;
+        height:100%;
+        background: $grey2;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+      }
+
+      li{
+        padding-right: 10px;
+      }
+    }
+
+    .PlaylistMenu {
+      grid-column: 1;
+      grid-row: 2;
+      // border: solid 2px $grey3;
+      padding-right: 25px;
+    }
+
+    .PlaylistSeparation{
+      position: relative;
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      .rectangle{
+        width:20px;
+        height:100%;
+        background: $grey2;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+      }
+
+      li{
+        padding-right: 10px;
+      }
+    }
+
+    .CCOnly{
+      grid-column: 1;
+      grid-row: 3;
+      border: solid 2px $grey3;
+      align-self: center;
+    }
+    .HomeButon{
+      align-self: center;
+    }
 }
