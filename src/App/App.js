@@ -1,8 +1,8 @@
-import MyComponent from '../Components/MyComponent.js';
-import DesktopHomePage from '../Components/DesktopHomePage.js';
-import ArtistPageDesktop from '../Components/ArtistPageDesktop.js';
-import DesktopLeftMenu from '../Components/DesktopLeftMenu.js';
-import AlbumPageDesktop from '../Components/AlbumPageDesktop.js';
+import MyComponent from '@components/MyComponent.js';
+import DesktopHomePage from '@components/DesktopHomePage.js';
+import ArtistPageDesktop from '@components/ArtistPageDesktop.js';
+import DesktopLeftMenu from '@components/DesktopLeftMenu.js';
+import AlbumPageDesktop from '@components/AlbumPageDesktop.js';
 
 const App = () => {
   return (
