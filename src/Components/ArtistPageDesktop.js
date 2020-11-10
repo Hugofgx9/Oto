@@ -1,6 +1,5 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
-import { myContainer } from './ComponentStyle/MyComponent.module.scss';
 import Titre from './Titre';
 import Album from './Album';
 
