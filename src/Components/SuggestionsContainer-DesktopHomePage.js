@@ -10,10 +10,10 @@ let ItemSuggest = [
 	{ItemTitle: 'Variété'},
 ]
 const DesktopHomePage = (props) => {
-	//const { color } = props;
+	const { SuggestType } = props;
 	return (
 			<div className={styles.SuggestContainer} >
-				<span className={styles.TitleContainer} > Suggestions </span>
+				<span className={styles.TitleContainer} > {SuggestType} </span>
 				<ul className={styles.SuggestList}>
 					{ItemSuggest.map((Items) =>{
 						return (

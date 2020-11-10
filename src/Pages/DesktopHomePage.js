@@ -3,6 +3,11 @@ import Genre from '../Components/ItemSuggestion-DesktopHomePage.js'
 import SuggestionsContainer from '../Components/SuggestionsContainer-DesktopHomePage.js'
 import styles from '@pages/PagesStyle/DesktopHomePage.module.scss'
 
+let SuggestTypes = [
+	{SuggestType: 'Genres'},
+	{SuggestType: 'Ambiance'},
+
+]
 const DesktopHomePage = (props) => {
 	//const { color } = props;
 	return (            
@@ -10,11 +15,20 @@ const DesktopHomePage = (props) => {
 				<div>
 
 				</div>
-				<div>
+				<ul>
+					{SuggestTypes.map((Type) => {
+						return(
+							<li>
+								<SuggestionsContainer
+									SuggestType={Type.SuggestType}
+								></SuggestionsContainer>
+							</li>
+						)
+					})}
                 	<SuggestionsContainer></SuggestionsContainer>
 					<SuggestionsContainer></SuggestionsContainer>
 					<SuggestionsContainer></SuggestionsContainer>
-				</div>
+				</ul>
 
 			</div>
 	);
