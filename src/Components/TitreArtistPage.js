@@ -1,16 +1,20 @@
 import React from 'react';
+//import PropTypes from 'prop-types';
 
-const Album = (props) => {
+const TitreArtistPage = (props) => {
 	//const { color } = props;
 	return (
+
 			<div>
+
 				<p>
 					illustrationAlbum
+					trackName
 					albumName
-					dateAlbum
+					ajouter
 				</p>
 			</div>
 	);
 }
 
-export default Album;
+export default TitreArtistPage;

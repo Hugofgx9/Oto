@@ -4,9 +4,7 @@
 	grid-template-columns: 1fr 20fr 15fr 3fr;
 	color: $grey3;
 
-	span {
-		&.title{
-			color: $greyLight
-		}
+	span.title {
+		color: $greyLight;
 	}
 }
