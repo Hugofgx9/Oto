@@ -2,8 +2,6 @@ import React from 'react';
 //import PropTypes from 'prop-types';
 import styles from './ComponentStyle/AlbumPageSingleTitle.module.scss';
 
-
-
 const AlbumPageSingleTitle = (props) => {
 	const { nb, title, artist, time, style } = props;
 	return (

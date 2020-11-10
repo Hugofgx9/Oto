@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 //import PropTypes from 'prop-types';
 import styles from '@pages/PagesStyle/DesktopAlbumPage.module.scss';
 import AlbumPageSingleTitle from '@components/AlbumPageSingleTitle';
@@ -16,9 +17,18 @@ let albumTrackList = [
 const AlbumPageDesktop = (props) => {
 	//const { color } = props;
 	return (
-			<div className={ styles.albumPage }>
+			<div className={ styles.albumPageContainer }>
 				<img src=""/>
-				<div className= { styles.headerMenu } >
+				<div className={ styles.albumInfo }>
+				 <h2 className={ styles.title }>Mania</h2>
+				 <h3 className={ styles.title2 }>Fall out Boy</h3>
+				 <div className= { styles.genreAndDate }>
+				 	<h3 className={ styles.corps }>Alternative</h3>
+				 	<span> - </span>
+				 	<h3 className={ styles.corps }>2018</h3>
+				 </div>
+				</div>
+				<div className= { clsx(styles.title2, styles.headerMenu) } >
 					<span>Morceau</span>
 					<span>Artiste</span>
 					<span>Durée</span>
