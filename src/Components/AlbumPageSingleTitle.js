@@ -9,7 +9,7 @@ const AlbumPageSingleTitle = (props) => {
 	return (
 		<div className={ styles.grid } style={ style }>
 		 <span> { nb } </span>
-		 <span className={ styles.title }> { title } </span>
+		 <span className={ styles.trackTitle }> { title } </span>
 		 <span> { artist } </span>
 		 <span> { time } </span>
 		</div>

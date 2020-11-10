@@ -10,7 +10,7 @@ import {
 
 import ArtistPageDesktop from '@pages/ArtistPageDesktop.js';
 import AlbumPageDesktop from '@pages/AlbumPageDesktop.js';
-import DesktopHomePage from '@pages/DesktopHomePage.js';
+import DesktopHomePage from '@pages/DesktopHomePage.js'
 import DesktopLeftMenu from '@components/DesktopLeftMenu.js'
 
 const App = () => {
