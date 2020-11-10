@@ -3,8 +3,6 @@ import React from 'react';
 import styles from '@pages/PagesStyle/DesktopAlbumPage.module.scss';
 import AlbumPageSingleTitle from '@components/AlbumPageSingleTitle';
 
-console.log(styles);
-
 let albumTrackList = [
 {title: 'Premier', artist: 'Hupsylon'},
 {title: 'Deuxieme', artist: 'Hupsylon'},
