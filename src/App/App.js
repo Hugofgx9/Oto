@@ -8,14 +8,15 @@ import {
   useLocation
 } from "react-router-dom";
 
-import DesktopHomePage from '@components/DesktopHomePage.js';
 import ArtistPageDesktop from '@pages/ArtistPageDesktop.js';
-import DesktopLeftMenu from '@components/DesktopLeftMenu.js';
+import ArtistPageDesktop from '@components/ArtistPageDesktop.js';
 import AlbumPageDesktop from '@pages/AlbumPageDesktop.js';
 
 const App = () => {
   return (
     <div className="App">
+
+
     	<Router>
     		<Switch>
     			<Route exact path="/">
@@ -35,6 +36,7 @@ const App = () => {
     			</Route>
     		</Switch>
     	</Router>
+
     </div>
   );
 }
