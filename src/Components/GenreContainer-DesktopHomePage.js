@@ -1,5 +1,5 @@
 import React from 'react';
-import Genre from './Genre'
+import Genre from './Genre-DesktopHomePage'
 
 
 const DesktopHomePage = (props) => {

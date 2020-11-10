@@ -1,12 +1,10 @@
 import React from 'react';
-import Genre from './Genre.js'
-import GenreContainer from './GenreContainer.js'
+import Genre from '../Components/Genre-DesktopHomePage.js'
+import GenreContainer from '../Components/GenreContainer-DesktopHomePage.js'
 
 const DesktopHomePage = (props) => {
 	//const { color } = props;
-	return (
-
-            
+	return (            
 			<div >
                 <GenreContainer></GenreContainer>
 			</div>

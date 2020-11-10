@@ -1,0 +1,12 @@
+.grid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 20fr 15fr 3fr;
+	color: $grey3;
+
+	span {
+		&.trackTitle {
+			color: $greyLight;
+		}
+	}
+}
