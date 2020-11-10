@@ -14,7 +14,13 @@ const LastReleaseArtistPage = (props) => {
 						[feat. Fall Out Boy, Craig Owens, 
 						Nicole Dollanganger]
 					</span>
-					dateAlbum
+					<p>
+						100 gecs - Fall Out Boy - Craig Owens
+					</p>					
+					<p className = {styles.corps}>
+						2020 - 1 titre, 2 min 55 s
+					</p>					
+						
 				</p>
 			</div>
 	);
