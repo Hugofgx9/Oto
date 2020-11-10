@@ -9,8 +9,9 @@ import {
 } from "react-router-dom";
 
 import ArtistPageDesktop from '@pages/ArtistPageDesktop.js';
-import ArtistPageDesktop from '@components/ArtistPageDesktop.js';
 import AlbumPageDesktop from '@pages/AlbumPageDesktop.js';
+import DesktopHomePage from '@pages/DesktopHomePage.js'
+import DesktopLeftMenu from '@components/DesktopLeftMenu.js'
 
 const App = () => {
   return (
