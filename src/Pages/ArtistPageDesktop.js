@@ -6,8 +6,6 @@ import LastReleaseArtistPage from '@components/LastReleaseArtistPage.js';
 import styles from '@pages/PagesStyle/ArtistPageDesktop.module.scss';
 import clsx from 'clsx';
 
-console.log(styles)
-
 const ArtistPageDesktop = (props) => {
 	//const { color } = props;
 	return (

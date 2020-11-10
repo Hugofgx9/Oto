@@ -21,12 +21,18 @@ const AlbumPageDesktop = (props) => {
 				<img src=""/>
 				<div className={ styles.albumInfo }>
 				 <h2 className={ styles.title }>Mania</h2>
-				 <h3 className={ styles.title2 }>Fall out Boy</h3>
+				 <h3 className={ clsx(styles.title2, styles.blue) }>Fall out Boy</h3>
 				 <div className= { styles.genreAndDate }>
 				 	<h3 className={ styles.corps }>Alternative</h3>
 				 	<span> - </span>
 				 	<h3 className={ styles.corps }>2018</h3>
 				 </div>
+				</div>
+				<div>
+					<p>
+						<span> {albumTrackList.length}, 20 minutes</span>
+					</p>
+					<span className={ styles.blue } > Lecture aléatoire </span>
 				</div>
 				<div className= { clsx(styles.title2, styles.headerMenu) } >
 					<span>Morceau</span>

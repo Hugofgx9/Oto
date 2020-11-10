@@ -1,20 +1,25 @@
 .albumPageContainer {
 	background-color: $grey2;
 	color: $white;
+	height: 100vh;
 	display: grid;
 	grid-template-rows: auto auto;
 	grid-template-columns: 200px 1fr;
-
 
 	img {
 		height: 200px;
 		width: 200px;
 		background-color: purple;
+		align-self: end;
 	}
 
 	.albumInfo {
 		grid-column: 2;
 		grid-row: 1;
+	}
+
+	.genreAndDate h3 {
+		display: inline-block;
 	}
 
 	.headerMenu { 
@@ -25,10 +30,6 @@
 		color: $grey3;
 		border-bottom: solid 1px $grey3;
 		align-self: end;
-	}
-
-	.genreAndDate h3 {
-		display: inline-block;
 	}
 
 	ul {
