@@ -14,7 +14,7 @@ let currentTracklist = [
 {title: 'Septieme', artist: 'Hupsylon', duration: '3:10'},
 ];
 
-const AlbumPageDesktop = (props) => {
+const DesktopAlbumPage = (props) => {
 	//const { color } = props;
 	return (
 			<div className={ styles.albumPageContainer }>
@@ -60,4 +60,4 @@ const AlbumPageDesktop = (props) => {
 	);
 }
 
-export default AlbumPageDesktop;
+export default DesktopAlbumPage;

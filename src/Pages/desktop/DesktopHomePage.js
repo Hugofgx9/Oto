@@ -1,6 +1,6 @@
 import React from 'react';
-import Genre from '../Components/ItemSuggestion-DesktopHomePage.js'
-import SuggestionsContainer from '../Components/SuggestionsContainer-DesktopHomePage.js'
+import Genre from '@components/ItemSuggestion-DesktopHomePage.js'
+import SuggestionsContainer from '@components/SuggestionsContainer-DesktopHomePage.js'
 import styles from '@pages/PagesStyle/DesktopHomePage.module.scss'
 
 let SuggestTypes = [

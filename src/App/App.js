@@ -7,34 +7,56 @@ import {
   useHistory,
   useLocation
 } from "react-router-dom";
+import Media from 'react-media';
 
-import ArtistPageDesktop from '@pages/ArtistPageDesktop.js';
-import AlbumPageDesktop from '@pages/AlbumPageDesktop.js';
-import DesktopHomePage from '@pages/DesktopHomePage.js'
-import DesktopLeftMenu from '@components/DesktopLeftMenu.js'
+import DesktopArtistPage from '@pages/desktop/DesktopArtistPage.js';
+import DesktopAlbumPage from '@pages/desktop/DesktopAlbumPage.js';
+import DesktopHomePage from '@pages/desktop/DesktopHomePage.js';
+import DesktopLeftMenu from '@components/DesktopLeftMenu.js';
 
 const App = () => {
   return (
     <div className="App">
 
     	<Router>
-    		<Switch>
-    			<Route exact path="/">
-    				<DesktopHomePage/>
-    			</Route>
-    			<Route path="/artist">
-    				<ArtistPageDesktop/>
-    			</Route>
-    			<Route path="/album">
-    				<AlbumPageDesktop/>
-    			</Route>
-    			<Route path="/leftmenu">
-    				<DesktopLeftMenu/>
-    			</Route>
-    			<Route path="/*">
-    				<Redirect to="/" />
-    			</Route>
-    		</Switch>
+        <Media queries={{ small: { maxWidth: 599 } }}>
+          {matches =>
+            matches.small ? (
+              <Switch>
+                <Route exact path="/">
+                </Route>
+                <Route path="/artist">
+                </Route>
+                <Route path="/album">
+                </Route>
+                <Route path="/leftmenu">
+                </Route>
+                <Route path="/*">
+                  <Redirect to="/" />
+                </Route>
+              </Switch>
+            ) : (
+          		<Switch>
+          			<Route exact path="/">
+          				<DesktopHomePage/>
+          			</Route>
+          			<Route path="/artist">
+          				<DesktopArtistPage/>
+          			</Route>
+          			<Route path="/album">
+          				<DesktopAlbumPage/>
+          			</Route>
+          			<Route path="/leftmenu">
+          				<DesktopLeftMenu/>
+          			</Route>
+          			<Route path="/*">
+          				<Redirect to="/" />
+          			</Route>
+          		</Switch>
+            )
+          }
+        </Media>
+
     	</Router>
 
     </div>
