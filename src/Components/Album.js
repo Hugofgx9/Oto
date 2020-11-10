@@ -1,11 +1,9 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
-import { myContainer } from './ComponentStyle/MyComponent.module.scss';
 
-const MyComponent = (props) => {
+const Album = (props) => {
 	//const { color } = props;
 	return (
-			<div className={ myContainer }>
+			<div>
 				<p>
 					illustrationAlbum
 					albumName
@@ -15,4 +13,4 @@ const MyComponent = (props) => {
 	);
 }
 
-export default MyComponent;
+export default Album;
