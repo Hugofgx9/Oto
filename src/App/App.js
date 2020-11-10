@@ -8,7 +8,7 @@ import {
   useLocation
 } from "react-router-dom";
 
-import DesktopHomePage from '@components/DesktopHomePage.js';
+import DesktopHomePage from '@pages/DesktopHomePage.js';
 import ArtistPageDesktop from '@components/ArtistPageDesktop.js';
 import DesktopLeftMenu from '@components/DesktopLeftMenu.js';
 import AlbumPageDesktop from '@pages/AlbumPageDesktop.js';
