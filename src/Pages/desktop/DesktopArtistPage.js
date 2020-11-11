@@ -23,6 +23,8 @@ const DesktopArtistPage = (props) => {
 			</div>
 			
 	
+			<div className = {styles.DesktopArtistPage}>
+				
 			<div className = {styles.ArtistPage}>
 
 				<h2 className = {clsx(styles.ArtistName, styles.title)}>
@@ -79,6 +81,8 @@ const DesktopArtistPage = (props) => {
 				</ul>
     		</div>
 				
+			</div>
+
 			</div>
 
 			</div>
