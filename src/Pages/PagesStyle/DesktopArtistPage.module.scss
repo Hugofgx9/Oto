@@ -4,16 +4,16 @@
 	background-color: $grey2;
 	display: grid;
 	grid-template-rows: 4;
-	grid-template-columns: 2;
+	grid-template-columns: 40vw auto;
 
 	.title{
 		color : $greyLight;
 	}
 
 	.ArtistName {
-		grid-row: 1/2;
-		grid-column: 1/2;
-		background-color: royalblue;
+		grid-row: 1;
+		grid-column: 1;
+		background-color: sienna;;
 	}
 	.TopTitresArtist {
 		grid-row: 2/3;
