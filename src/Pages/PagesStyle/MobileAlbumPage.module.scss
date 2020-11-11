@@ -1,0 +1,24 @@
+.albumPage {
+	display: grid;
+	grid-template-columns: $mobile-grid;
+
+	.content {
+		grid-column: 2;
+		position: relative;
+		
+		img{
+			width: 100%;
+			height: auto;
+		}
+
+		.btn{
+			display: grid;
+			position: absolute;
+			right: -9vw;
+			bottom: -18vw;
+
+			button{
+			}
+		}
+	}
+}
