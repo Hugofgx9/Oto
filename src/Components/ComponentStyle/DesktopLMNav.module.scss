@@ -1,0 +1,63 @@
+.gridLMNav {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    text-align: right;
+    
+    // DISPLACEMENT
+
+    .HomeButon{
+      align-self: center;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+		.BibliothequeNav {
+      grid-column: 1;
+      grid-row: 2;
+      padding-right: 25px;
+    }
+
+    .PlaylistNav {
+      grid-column: 1;
+      grid-row: 3;
+      padding-right: 25px;
+    }
+
+    .CCOnly{
+      grid-column: 1;
+      grid-row: 4;
+
+      .CCButon{
+        border: 2px;
+        border-color: $grey3;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-block;
+      }
+    }
+
+    // ELEMENT
+
+    li{
+      padding-right: 6px;
+    }
+
+    .separation{
+      position: relative;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-top: 5px;
+    }
+
+    .rectangle{
+      width:20px;
+      height:100%;
+      background: $grey2;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+}

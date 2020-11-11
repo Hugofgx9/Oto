@@ -13,7 +13,7 @@ import Media from 'react-media';
 import DesktopArtistPage from '@pages/desktop/DesktopArtistPage.js';
 import DesktopAlbumPage from '@pages/desktop/DesktopAlbumPage.js';
 import DesktopHomePage from '@pages/desktop/DesktopHomePage.js';
-import DesktopLeftMenu from '@components/DesktopLeftMenu.js';
+import DesktopLM from '@components/DesktopLM.js';
 
 //mobile pages
 import MobileArtistPage from '@pages/mobile/MobileArtistPage.js';
@@ -41,23 +41,26 @@ const App = () => {
                 </Route>
               </Switch>
             ) : (
-          		<Switch>
-          			<Route exact path="/">
-          				<DesktopHomePage/>
-          			</Route>
-          			<Route path="/artist">
-          				<DesktopArtistPage/>
-          			</Route>
-          			<Route path="/album">
-          				<DesktopAlbumPage/>
-          			</Route>
-          			<Route path="/leftmenu">
-          				<DesktopLeftMenu/>
-          			</Route>
-          			<Route path="/*">
-          				<Redirect to="/" />
-          			</Route>
-          		</Switch>
+              <div>
+                <DesktopLM/>
+                <Switch>
+                  <Route exact path="/">
+                    <DesktopHomePage/>
+                  </Route>
+                  <Route path="/artist">
+                    <DesktopArtistPage/>
+                  </Route>
+                  <Route path="/album">
+                    <DesktopAlbumPage/>
+                  </Route>
+                  {/* <Route path="/leftmenu">
+                    <DesktopLM/>
+                  </Route> */}
+                  <Route path="/*">
+                    <Redirect to="/" />
+                  </Route>
+                </Switch>
+              </div>
             )
           }
         </Media>
