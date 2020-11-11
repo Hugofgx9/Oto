@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 //STYLE';
 import styles from './ComponentStyle/DesktopLeftMenu.module.scss';
+import DesktopInfoPlayer from '@components/DesktopInfoPlayer.js'
 
 const DesktopLeftMenu = (props) => {
 	return (
@@ -31,6 +32,10 @@ const DesktopLeftMenu = (props) => {
 				<div className={styles.CCOnly}>
 					CC ONLY Futur Buton
 				</div>
+				<div className={styles.InfoPlayer}>
+					<DesktopInfoPlayer/>
+				</div>
+				
 			</div>
 	);
 }
