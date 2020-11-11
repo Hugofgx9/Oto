@@ -10,19 +10,24 @@ import styles from '@pages/PagesStyle/DesktopArtistPage.module.scss';
 const DesktopArtistPage = (props) => {
 	//const { color } = props;
 	return (
+	
+	<div className ={styles.insertionMenu} >
 
-		<div>
+			<div>
+			
+			</div>
 
+			<div>
 			<div className ={styles.ArtistBannerWrap} >
-				<img className = {styles.ArtistBanner} src="https://scontent.fcdg2-1.fna.fbcdn.net/v/t1.0-9/70757437_10156194747250780_7003386579234324480_o.jpg?_nc_cat=101&ccb=2&_nc_sid=e3f864&_nc_ohc=9C5sAMgV7QAAX8Wuvn9&_nc_oc=AQkzD5BTSQUySSZ5MRVl7Tt53BW9mhfOirptin_fiAmj3lhMIDWk6ner9nBkCBqvKkU&_nc_ht=scontent.fcdg2-1.fna&oh=04e0c67d9a12b189c65017e29de23e28&oe=5FCFDC86" alt=""/>
+				<img className = {styles.ArtistBanner} src="https://scontent.fcdg3-1.fna.fbcdn.net/v/t1.0-9/100927022_10156887336900780_4584604578883829760_o.jpg?_nc_cat=106&ccb=2&_nc_sid=09cbfe&_nc_ohc=Feq_qezjCZQAX82hSlc&_nc_ht=scontent.fcdg3-1.fna&oh=85eaad7a04ebbda0a98be2f81faa094e&oe=5FD2C40D" alt=""/>
 			</div>
 			
 	
-		<div className = {styles.ArtistPage}>
+			<div className = {styles.ArtistPage}>
 
-			<h2 className = {clsx(styles.ArtistName, styles.title)}>
+				<h2 className = {clsx(styles.ArtistName, styles.title)}>
 				Fall Out Boy 
-			</h2>
+				</h2>
 
 			<div className = {styles.DerniereSortieArtistPage} >
 				<h2 className = {styles.title2}>
@@ -74,8 +79,9 @@ const DesktopArtistPage = (props) => {
 				</ul>
     		</div>
 				
-		</div>
+			</div>
 
+			</div>
 		</div>
 	);
 }

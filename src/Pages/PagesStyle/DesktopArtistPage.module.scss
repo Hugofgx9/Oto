@@ -1,4 +1,9 @@
-.ArtistPage {
+.insertionMenu{
+	display: grid;
+	grid-template-columns: 300px 1fr;
+}
+
+.DesktopArtistPage {
 
 	background-color: $grey2;
 	display: grid;
@@ -33,6 +38,7 @@
 	.ListeAlbums{
 		display: flex;
 		font-family: 'Helvetica Regular';
+		text-align: center;
   		color: $greyLight;
   		font-size: 12px;
 	}
@@ -42,9 +48,14 @@
 .ArtistBannerWrap{
 	overflow: hidden;
 	height: 200px;
+	/*
 	display: flex;
-    align-items: center; /* vertical */
-    justify-content: center; /* horizontal */
+	
+	align-items: center; 
+	
+	justify-content: center;
+	*/
+	
 	img{
 		width: 100%;
 		height: auto;

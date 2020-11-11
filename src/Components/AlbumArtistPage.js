@@ -1,13 +1,18 @@
 import React from 'react';
+import styles from '@components/ComponentStyle/AlbumArtistPage.module.scss';
 
 const AlbumArtistPage = (props) => {
 	//const { color } = props;
 	return (
 			<div>
 				<p>
-					illustrationAlbum
+					<img className  ={ styles	.AlbumArtistPage}   
+					src=""
+					/>					
 					albumName
-					dateAlbum
+					<span className = {styles.corpsdate}>
+						dateAlbum
+					</span>
 				</p>
 			</div>
 	);
