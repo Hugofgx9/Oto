@@ -25,9 +25,7 @@ const DesktopHomePage = (props) => {
 							</li>
 						)
 					})}
-                	<SuggestionsContainer></SuggestionsContainer>
-					<SuggestionsContainer></SuggestionsContainer>
-					<SuggestionsContainer></SuggestionsContainer>
+                	
 				</ul>
 
 			</div>
