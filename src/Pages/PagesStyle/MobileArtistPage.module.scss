@@ -1,0 +1,32 @@
+.artistPage {
+
+	.grid {
+		display: grid;
+		grid-template-columns: 18vw 1fr 9vw;
+	}
+
+	.centerContent{
+		grid-column: 2;
+
+	}
+
+	.bluePart {
+		position: relative;
+		background-color: $blue;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		.playBtn {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			background-color: $grey1;
+			color: $blue;
+			height: 18vw;
+			width: 18vw;
+		}
+	}
+}

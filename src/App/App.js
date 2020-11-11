@@ -9,10 +9,14 @@ import {
 } from "react-router-dom";
 import Media from 'react-media';
 
+//desktop pages
 import DesktopArtistPage from '@pages/desktop/DesktopArtistPage.js';
 import DesktopAlbumPage from '@pages/desktop/DesktopAlbumPage.js';
 import DesktopHomePage from '@pages/desktop/DesktopHomePage.js';
 import DesktopLeftMenu from '@components/DesktopLeftMenu.js';
+
+//mobile pages
+import MobileArtistPage from '@pages/mobile/MobileArtistPage.js';
 
 const App = () => {
   return (
@@ -26,6 +30,7 @@ const App = () => {
                 <Route exact path="/">
                 </Route>
                 <Route path="/artist">
+                  <MobileArtistPage/>
                 </Route>
                 <Route path="/album">
                 </Route>
