@@ -1,0 +1,24 @@
+.DesktopLMGrid{
+    position: fixed;
+    background-color: $grey1;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    color: $greyLight;
+  	display: grid;
+	grid-template-columns: 220px;
+    grid-template-rows: 65vh 35vh;
+    text-align: center;
+
+    // .NavGrid{
+    //     grid-column: 1;
+    //     grid-row: 1;
+    // }
+
+    // .InfoPlayerGrid{
+    //     grid-column: 1;
+    //     grid-row: 2;
+
+    // }
+
+}

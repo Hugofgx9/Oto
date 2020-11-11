@@ -2,7 +2,7 @@ import React from 'react';
 import Genre from '@components/ItemSuggestion-DesktopHomePage.js'
 import SuggestionsContainer from '@components/SuggestionsContainer-DesktopHomePage.js'
 import styles from '@pages/PagesStyle/DesktopHomePage.module.scss'
-import DesktopLeftMenu from '@components/DesktopLeftMenu.js'
+import DesktopLeftMenu from '@components/DesktopLM.js'
 
 let SuggestTypes = [
 	{SuggestType: 'Genres'},
