@@ -24,7 +24,6 @@
 		.BibliothequeMenu {
       grid-column: 1;
       grid-row: 1;
-      // border: solid 2px $grey3;
       padding-right: 25px;
     }
     .BibliothequeSeparation{
@@ -50,7 +49,6 @@
     .PlaylistMenu {
       grid-column: 1;
       grid-row: 2;
-      // border: solid 2px $grey3;
       padding-right: 25px;
     }
 
@@ -77,8 +75,6 @@
     .CCOnly{
       grid-column: 1;
       grid-row: 3;
-      padding-left: 30%;
-      text-align: left;
     }
 
     .InfoPlayer{

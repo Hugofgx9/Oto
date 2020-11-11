@@ -15,6 +15,7 @@ const DesktopInfoPlayer = () => {
 					<h3 className={ styles.corps }>
 						Pink Floyd
 					</h3>
+					<img src="../assets/heartfilled.png"/>
 				</div>
 			</div>
 	);

@@ -9,12 +9,16 @@ const TitreArtistPage = (props) => {
 			<div>
 
 				<p>
-					illustrationAlbum 
+					<img className  = { styles.IllustrationTopTitreArtistPage}   
+					src=""
+					/>
 					 trackName 
 					<span className={styles.corps}>
 						 albumName 
 					</span>
-					 ajouter 
+					<span className={styles.add}>
+						 + 
+					</span>
 				</p>
 			</div>
 	);
