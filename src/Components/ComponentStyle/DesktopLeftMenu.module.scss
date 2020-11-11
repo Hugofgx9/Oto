@@ -7,8 +7,12 @@
     color: $greyLight;
   	display: grid;
 	  grid-template-columns: 220px;
-    grid-template-rows: 100px 40vh 20vh;
+    grid-template-rows: 15vh 30vh 20vh 35vh;
     text-align: center;
+
+    .HomeButon{
+      align-self: center;
+    }
 
     .gridchild{
       display: grid;
@@ -73,10 +77,13 @@
     .CCOnly{
       grid-column: 1;
       grid-row: 3;
-      border: solid 2px $grey3;
-      align-self: center;
+      padding-left: 30%;
+      text-align: left;
     }
-    .HomeButon{
-      align-self: center;
+
+    .InfoPlayer{
+      grid-column: 1;
+      grid-row: 4;
     }
+
 }

@@ -1,18 +1,16 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
-import TitreArtistPage from '../Components/TopTitlesArtistPage.js';
-import AlbumArtistPage from '../Components/AlbumArtistPage.js';
-import LastReleaseArtistPage from '@components/LastReleaseArtistPage.js';
-import styles from '@pages/PagesStyle/ArtistPageDesktop.module.scss';
 import clsx from 'clsx';
 
-console.log(styles)
+import TitreArtistPage from '@components/TopTitlesArtistPage.js';
+import AlbumArtistPage from '@components/AlbumArtistPage.js';
+import LastReleaseArtistPage from '@components/LastReleaseArtistPage.js';
+import styles from '@pages/PagesStyle/DesktopArtistPage.module.scss';
 
-const ArtistPageDesktop = (props) => {
+const DesktopArtistPage = (props) => {
 	//const { color } = props;
 	return (
 
-		
 		<div>
 
 			<div className ={styles.ArtistBannerWrap} >
@@ -82,4 +80,4 @@ const ArtistPageDesktop = (props) => {
 	);
 }
 
-export default ArtistPageDesktop;
+export default DesktopArtistPage;
