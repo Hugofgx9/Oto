@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
-    text-align: right;
     
     // DISPLACEMENT
 
@@ -16,12 +15,14 @@
       grid-column: 1;
       grid-row: 2;
       padding-right: 25px;
+      text-align: right;
     }
 
     .PlaylistNav {
       grid-column: 1;
       grid-row: 3;
       padding-right: 25px;
+      text-align: right;
     }
 
     .CCOnly{
