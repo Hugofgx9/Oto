@@ -1,0 +1,46 @@
+.playerPage{
+    display: grid;
+    grid-template-rows: 2fr 6fr 4fr ;
+    height: 100vh;
+    .upPart{
+        display: grid;
+        grid-template-columns: $mobile-grid;
+    }
+    .midPart{
+        display: grid;
+        grid-template-columns: $mobile-grid;
+        
+    }
+    .trackInfo{
+        color: white;
+        position: relative;
+
+        .title{
+            font-family: 'MonumentExtended regular';
+            color: $greyLight;
+            font-size: 16px;
+          }
+        .artist{
+            font-family: 'MonumentExtended light';
+            color: $blue;
+            font-size: 12px;
+        }
+        img{
+            width: 73vw;
+            height: 73vw;
+            background-color: white;
+        }  
+    }
+    .downPart{
+        display: grid;
+        grid-template-columns: $mobile-grid;
+        .controler{
+            color: $blue ;
+            div{
+                color: $greyLight;
+            }
+        
+            background-color: $grey1;
+        }
+    }
+}
