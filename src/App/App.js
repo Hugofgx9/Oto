@@ -21,6 +21,9 @@ import MobileArtistPage from '@pages/mobile/MobileArtistPage.js';
 import MobileAlbumPage from '@pages/mobile/MobileAlbumPage.js';
 import MobileHomePage from '@pages/mobile/MobileHomePage.js';
 
+//mobile components
+import MobilePlaybar from '@components/MobilePlaybar.js'
+
 const App = () => {
   return (
     <div className="App">
@@ -40,6 +43,9 @@ const App = () => {
                   <MobileAlbumPage/>
                 </Route>
                 <Route path="/leftmenu">
+                </Route>
+                <Route path="/mobileplaybar">
+                  <MobilePlaybar/>
                 </Route>
                 <Route path="/*">
                   <Redirect to="/" />
