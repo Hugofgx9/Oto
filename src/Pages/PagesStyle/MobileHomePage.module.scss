@@ -1,16 +1,46 @@
 .homePage{
-	ul{
-		display: grid;
-		grid-template-rows: auto;
-		grid-auto-flow: column;
+	display: grid;
+	grid-template-columns: $mobile-grid;
+	margin-top: 5vh;
 
-		li{
-			width: 5vw;
+	> div {
+		grid-column: 2/4; 
 
-			img{
-				background-color: red;
-				height: 50px;
-				width: 50px;
+		.section {
+			margin-top: 6vh;
+			position: relative;
+
+			.thinLine{
+				position: absolute;
+				right: 0;
+				width: 91vw;
+			}
+
+			.scrollWrap {
+				overflow-x: scroll;
+				width: calc(100vw - 18vw);
+
+				&::-webkit-scrollbar { 
+					display: none !important;
+				}
+
+				ul{
+					display: grid;
+					grid-auto-flow: column;
+					//grid-template-rows: auto;
+
+
+					li{
+						
+
+						img{
+							background-color: red;
+							width: 20vw;
+							height: 20vw;
+							margin-right: 20px;
+						}
+					}
+				}
 			}
 		}
 	}
