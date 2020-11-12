@@ -7,6 +7,7 @@ import DesktopLeftMenu from '@components/DesktopLM.js'
 let SuggestTypes = [
 	{SuggestType: 'Genres'},
 	{SuggestType: 'Ambiance'},
+	{SuggestType: 'Top'},
 
 ]
 const DesktopHomePage = (props) => {
