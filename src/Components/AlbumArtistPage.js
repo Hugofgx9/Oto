@@ -4,14 +4,16 @@ import styles from '@components/ComponentStyle/AlbumArtistPage.module.scss';
 const AlbumArtistPage = (props) => {
 	//const { color } = props;
 	return (
-			<div>
-				<p>
-					<img className  ={ styles.AlbumArtistPage} src="" alt=""/>					
-					albumName
-					<span className = {styles.corpsdate}>
-						dateAlbum
-					</span>
-				</p>
+			<div className  ={ styles.AlbumArtistPage}>
+				
+				<img  src="" alt=""/>
+				<span className = {styles.albumName}>
+				albumName
+				</span>				
+				<span className = {styles.corpsdate}>
+					dateAlbum
+				</span>
+				
 			</div>
 	);
 }

@@ -4,8 +4,7 @@ import clsx from 'clsx';
 import styles from '@pages/PagesStyle/MobileArtistPage.module.scss';
 
 import MobileButton from '@components/MobileButton.js';
-
-console.log(MobileButton);
+import MobileThinLine from '@components/MobileThinLine.js';
 
 const albumsOfArtist = [
 	{title: 'Dream But' , img: 'https://www.babelio.com/users/AVT_Jimi-Hendrix_897.jpg' , year: 2018},
@@ -41,7 +40,7 @@ const MobileArtistPage = () => {
 							<h4>Nom Album</h4>
 							<span>2020 - 1 titre</span>
 						</div>
-						<hr className={ styles.sectionBorders }/>
+						<MobileThinLine className={ styles.sectionBorders }/>
 					</div>
 
 					<div className={ clsx(styles.topTrack)} >
@@ -51,13 +50,13 @@ const MobileArtistPage = () => {
 									return(
 										<li key={index}>
 											<span> {track.title} </span>
-											<hr/>
+											<MobileThinLine/>
 										</li>
 									)
 								}
 							)}
 						</ul>
-						<hr className={ styles.sectionBorders }/>		
+						<MobileThinLine className={ styles.sectionBorders }/>	
 					</div>
 
 					<div className={ clsx(styles.albumsList)} >

@@ -1,10 +1,21 @@
 .AlbumArtistPage{
-        height: 150px ;
-        width: 150px ; 
-    }   
 
-    .corpsdate{
-        color: $grey3;
+    display: grid;
+    justify-content: start;
+    
+    img {
+        height: 150px ;            
+        width: 150px ; 
+        margin-right: 60px;
     }
+}
+    
+.corpsdate{
+    color: $grey3;
+    text-align: left; 
+}
+.albumName{
+    text-align: left; 
+}
 
 
