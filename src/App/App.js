@@ -17,6 +17,8 @@ import DesktopLM from '@components/DesktopLM.js';
 
 //mobile pages
 import MobileArtistPage from '@pages/mobile/MobileArtistPage.js';
+import MobileAlbumPage from '@pages/mobile/MobileAlbumPage.js';
+import MobileHomePage from '@pages/mobile/MobileHomePage.js';
 
 const App = () => {
   return (
@@ -28,11 +30,13 @@ const App = () => {
             matches.small ? (
               <Switch>
                 <Route exact path="/">
+                  <MobileHomePage/>
                 </Route>
                 <Route path="/artist">
                   <MobileArtistPage/>
                 </Route>
                 <Route path="/album">
+                  <MobileAlbumPage/>
                 </Route>
                 <Route path="/leftmenu">
                 </Route>
