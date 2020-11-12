@@ -1,12 +1,13 @@
 import React from 'react';
+import soundbuton from '../img/sound.svg';
 
 //styles
 import styles from './ComponentStyle/DesktopPlayerSoundbar.module.scss';
 
 const DesktopPlayerSoundbar = () => {
 	return (
-        <div>
-            <h1>zzzzzz</h1>
+        <div className={ styles.soundbar}>
+            <img src={soundbuton} alt="soundbuton" />
         </div>
     );
 }
