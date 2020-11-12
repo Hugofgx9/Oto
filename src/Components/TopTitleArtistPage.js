@@ -13,7 +13,9 @@ const TopTitleArtistPage = (props) => {
 					src=""
 					alt=""
 					/>
-					 trackName 
+					<span className={styles.trackName}>
+						trackName 
+					</span> 
 					<span className={styles.corps}>
 						 albumName 
 					</span>

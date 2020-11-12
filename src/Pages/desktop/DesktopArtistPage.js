@@ -91,6 +91,12 @@ const DesktopArtistPage = (props) => {
 						<li>
 							<AlbumArtistPage/>
 						</li>
+						<li>
+							<AlbumArtistPage/>
+						</li>
+						<li>
+							<AlbumArtistPage/>
+						</li>
 					</ul>
 				</div>
 				
