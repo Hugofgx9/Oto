@@ -1,6 +1,6 @@
 .DesktopHomePage{
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 280px 1fr;
     background-color: #1C1C1C;
     .SuggestContainer{
         padding-top: 20px;
@@ -13,8 +13,8 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         font-size: 14px;
         img{
-            width: 200px;
-            height: 200px;
+            width: 14vw;
+            height: 14vw;
             background-color: white;
         }
     }

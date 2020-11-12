@@ -15,7 +15,7 @@ const DesktopLMInfoPlayer = () => {
 					<h3 className={ styles.corps }>
 						Pink Floyd
 					</h3>
-					<img className={ styles.like } src="../assets/heartfilled.png" alt=""/>
+					{/* <img className={ styles.like } src="./assets/heartfilled.png" alt=""/> */}
 				</div>
 			</div>
 	);
