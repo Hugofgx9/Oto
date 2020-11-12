@@ -14,9 +14,6 @@ const DesktopHomePage = (props) => {
 	//const { color } = props;
 	return (            
 			<div className={styles.DesktopHomePage} >
-				<div>
-				<DesktopLeftMenu/> 
-				</div>
 				<ul>
 					{SuggestTypes.map((Type, index) => {
 						return(

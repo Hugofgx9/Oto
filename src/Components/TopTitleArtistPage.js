@@ -12,11 +12,11 @@ const TopTitleArtistPage = (props) => {
 
 				<p>
 					<img className  = { styles.IllustrationTopTitreArtistPage}   
-					src=""
+					src={img}
 					alt=""
 					/>
 					<span className={clsx(styles.trackName)}> { title } </span>
-					<span className={clsx(styles.albumName)}>  { album } </span>						 albumName 
+					<span className={clsx(styles.albumName)}>  { album } </span>
 					<span className={styles.add}>
 						 + 
 					</span>
