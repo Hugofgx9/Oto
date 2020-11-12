@@ -2,10 +2,10 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
+  // Link,
   Redirect,
-  useHistory,
-  useLocation
+  //useHistory,
+  //useLocation
 } from "react-router-dom";
 import Media from 'react-media';
 

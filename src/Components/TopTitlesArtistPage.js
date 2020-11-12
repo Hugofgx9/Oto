@@ -11,6 +11,7 @@ const TitreArtistPage = (props) => {
 				<p>
 					<img className  = { styles.IllustrationTopTitreArtistPage}   
 					src=""
+					alt=""
 					/>
 					 trackName 
 					<span className={styles.corps}>

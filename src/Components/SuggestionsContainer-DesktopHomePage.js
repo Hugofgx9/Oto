@@ -39,12 +39,10 @@ const DesktopHomePage = (props) => {
 				<span className={styles.TitleContainer} > {SuggestType} </span>
 
 				<ul className={styles.SuggestList}>
-					{GlobalSuggest[SuggestType].map((Items) =>{
+					{GlobalSuggest[SuggestType].map((Items, index) =>{
 						return (
-							<li>
-								<Suggestion
-									ItemTitle={Items.ItemTitle}
-								/>
+							<li key={index} >
+								<Suggestion ItemTitle={Items.ItemTitle} />
 							</li>
 						)
 					})}
