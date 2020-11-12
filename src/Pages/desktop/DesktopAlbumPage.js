@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { SpotifyContext } from '@components/SpotifyProvider';
 import clsx from 'clsx';
 //import PropTypes from 'prop-types';
 import styles from '@pages/PagesStyle/DesktopAlbumPage.module.scss';
@@ -16,6 +17,18 @@ let currentTracklist = [
 
 const DesktopAlbumPage = (props) => {
 	//const { color } = props;
+
+  // const { spotifyApi } = useContext(SpotifyContext)
+  // const [tracks, setTracks] = useState([]);
+
+  // useEffect(() => {
+  //   const loadTracks = async () => {
+  //     const results = await spotifyApi.searchTracks('vulfpeck', { limit: 5 })
+  //     setTracks(results.tracks.items)
+  //   }
+  //   loadTracks();
+  // }, [spotifyApi])
+
 	return (
 			<div className={ styles.albumPageContainer }>
 				<img src="https://images-na.ssl-images-amazon.com/images/I/710ZkhTLgJL._SY355_.jpg" alt=""/>
