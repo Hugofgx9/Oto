@@ -1,5 +1,3 @@
-
-
 .artistPage{
 	margin-left: 220px;
 	margin-bottom: 200px;
@@ -9,9 +7,7 @@
 		height: 250px;
 		/*
 		display: flex;
-		
 		align-items: center; 
-		
 		justify-content: center;
 		*/
 		
@@ -21,8 +17,8 @@
 		}
 	}
 	.artistPageContent {
-		margin-left: 30px;
-		margin-right: 30px;
+		margin-left: $margin;
+		margin-right: $margin;
 
 		.artistName {
 			width: 40%;
@@ -64,6 +60,26 @@
 				.albumsList{
 					display: grid;
 					grid-auto-flow: column;
+
+					//vw whitout leftmenu
+					@function bettervw($vw) {
+						$new-window: calc(100vw - (#{$LM-width} + 2 * #{$margin}));
+					  $result: calc(#{$new-window} / 100 * #{$vw});
+					  @return $result;
+					}
+
+					img {
+						background-color: red;
+				/* 	width: 9vw;
+						height: 9vw;
+						margin-right: 4.5vw;
+						calc to have value in vw - LeftMenu 
+						margin-right: calc( (100vw - #{$LM-width}) / 100 * 4.5 ); */
+						margin-right: bettervw(5.2);
+						width: bettervw(12);
+						height: bettervw(12);
+
+					}
 				}
 			}
 		}
