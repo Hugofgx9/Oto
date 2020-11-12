@@ -1,13 +1,14 @@
 .playerPage{
+    display: grid;
+    grid-template-rows: 2fr 6fr 4fr ;
+    height: 100vh;
     .upPart{
         display: grid;
         grid-template-columns: $mobile-grid;
-        height: 20vh;
     }
     .midPart{
         display: grid;
         grid-template-columns: $mobile-grid;
-        height: 45vh;
         
     }
     .trackInfo{
@@ -25,13 +26,21 @@
             font-size: 12px;
         }
         img{
-            width: 100%;
-            height: 70vw;
+            width: 73vw;
+            height: 73vw;
             background-color: white;
         }  
     }
     .downPart{
         display: grid;
         grid-template-columns: $mobile-grid;
+        .controler{
+            div{
+                color: $greyLight;
+            }
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr ;
+            background-color: $grey1;
+        }
     }
 }
