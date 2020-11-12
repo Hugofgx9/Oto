@@ -14,7 +14,7 @@ import DesktopArtistPage from '@pages/desktop/DesktopArtistPage.js';
 import DesktopAlbumPage from '@pages/desktop/DesktopAlbumPage.js';
 import DesktopHomePage from '@pages/desktop/DesktopHomePage.js';
 import DesktopLM from '@components/DesktopLM.js';
-import DesktopPlaybar from '@components/DesktopPlaybar.js';
+import DesktopPlayer from '@components/DesktopPlayer.js';
 
 //mobile pages
 import MobileArtistPage from '@pages/mobile/MobileArtistPage.js';
@@ -48,7 +48,7 @@ const App = () => {
             ) : (
               <div>
                 <DesktopLM/>
-                <DesktopPlaybar/>
+                <DesktopPlayer/>
                 <Switch>
                   <Route exact path="/">
                     <DesktopHomePage/>
