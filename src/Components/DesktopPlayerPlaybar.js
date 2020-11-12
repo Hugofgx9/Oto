@@ -1,12 +1,15 @@
 import React from 'react';
 
+//SVG
+import playbuton from '@src/assets/img/play.svg';
+
 //styles
 import styles from './ComponentStyle/DesktopPlayerPlaybar.module.scss';
 
 const DesktopPlayerPlaybar = () => {
 	return (
-        <div>
-            <h1>aaaaa</h1>
+        <div className={ styles.playbar}>
+            <img src={playbuton} alt="playbuton" />
         </div>
     );
 }
