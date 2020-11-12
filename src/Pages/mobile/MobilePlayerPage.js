@@ -35,8 +35,10 @@ const MobilePlayerPage = (props) => {
                 </div>
             </div>
             <div className={styles.downPart}>
-                <div>
-                    hi
+                <div className={styles.controler}>
+                    <div> Like </div>
+                    <div> Repeat </div>
+                    <div> Suffle </div>
                 </div>
                 <div>
                     ho
