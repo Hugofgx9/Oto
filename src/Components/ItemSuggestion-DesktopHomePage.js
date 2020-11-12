@@ -7,7 +7,7 @@ const DesktopHomePage = (props) => {
 			<div>
 				<div>
 				
-					<img src = '{ImageSrc}' ></img>
+					<img src={ImageSrc} alt="" ></img>
 				</div>
 				<span>
 					{ItemTitle}

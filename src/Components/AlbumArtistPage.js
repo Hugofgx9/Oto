@@ -6,9 +6,7 @@ const AlbumArtistPage = (props) => {
 	return (
 			<div>
 				<p>
-					<img className  ={ styles	.AlbumArtistPage}   
-					src=""
-					/>					
+					<img className  ={ styles.AlbumArtistPage} src="" alt=""/>					
 					albumName
 					<span className = {styles.corpsdate}>
 						dateAlbum
