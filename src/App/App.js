@@ -19,6 +19,7 @@ import DesktopLM from '@components/DesktopLM.js';
 import MobileArtistPage from '@pages/mobile/MobileArtistPage.js';
 import MobileAlbumPage from '@pages/mobile/MobileAlbumPage.js';
 import MobileHomePage from '@pages/mobile/MobileHomePage.js';
+import MobilePlayerPage from '@pages/mobile/MobilePlayerPage.js';
 
 const App = () => {
   return (
@@ -37,6 +38,9 @@ const App = () => {
                 </Route>
                 <Route path="/album">
                   <MobileAlbumPage/>
+                </Route>
+                <Route path="/player">
+                  <MobilePlayerPage/>
                 </Route>
                 <Route path="/leftmenu">
                 </Route>
