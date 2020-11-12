@@ -22,10 +22,14 @@ import MobileAlbumPage from '@pages/mobile/MobileAlbumPage.js';
 import MobileHomePage from '@pages/mobile/MobileHomePage.js';
 import MobilePlayerPage from '@pages/mobile/MobilePlayerPage.js';
 
+
 //mobile components
 import MobilePlaybar from '@components/mobile/MobilePlaybar.js'
+import Spotify from '@components/Spotify/spotify.js';
+
 
 const App = () => {
+
   return (
     <div className="App">
 
@@ -60,7 +64,10 @@ const App = () => {
                 <DesktopLM/>
                 <DesktopPlayer/>
                 <Switch>
-                  <Route exact path="/" component={DesktopHomePage}/>
+                  <Route exact path="/" >
+                    <DesktopHomePage/>
+                    <Spotify/>
+                  </Route>
                   <Route path="/artist">
                     <DesktopArtistPage/>
                   </Route>
