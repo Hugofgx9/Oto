@@ -1,5 +1,7 @@
 import React from 'react';
-import playbuton from '../img/play.svg';
+
+//SVG
+import playbuton from '@src/assets/img/play.svg';
 
 //styles
 import styles from './ComponentStyle/DesktopPlayerPlaybar.module.scss';

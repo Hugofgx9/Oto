@@ -1,5 +1,5 @@
 import React from 'react';
-import soundbuton from '../img/sound.svg';
+import soundbuton from '@src/assets/img/sound.svg';
 
 //styles
 import styles from './ComponentStyle/DesktopPlayerSoundbar.module.scss';
