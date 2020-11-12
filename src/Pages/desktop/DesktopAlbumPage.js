@@ -18,7 +18,7 @@ const DesktopAlbumPage = (props) => {
 	//const { color } = props;
 	return (
 			<div className={ styles.albumPageContainer }>
-				<img src="https://images-na.ssl-images-amazon.com/images/I/710ZkhTLgJL._SY355_.jpg"/>
+				<img src="https://images-na.ssl-images-amazon.com/images/I/710ZkhTLgJL._SY355_.jpg" alt=""/>
 				<div className={ styles.albumInfo }>
 					<h2 className={ clsx(styles.title, styles.greyLight) }>Mania</h2>
 					<div className={ clsx(styles.bottomAlign) }>

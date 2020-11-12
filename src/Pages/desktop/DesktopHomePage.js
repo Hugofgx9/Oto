@@ -1,5 +1,5 @@
 import React from 'react';
-import Genre from '@components/ItemSuggestion-DesktopHomePage.js'
+//import Genre from '@components/ItemSuggestion-DesktopHomePage.js'
 import SuggestionsContainer from '@components/SuggestionsContainer-DesktopHomePage.js'
 import styles from '@pages/PagesStyle/DesktopHomePage.module.scss'
 import DesktopLeftMenu from '@components/DesktopLM.js'
@@ -17,12 +17,10 @@ const DesktopHomePage = (props) => {
 				<DesktopLeftMenu/> 
 				</div>
 				<ul>
-					{SuggestTypes.map((Type) => {
+					{SuggestTypes.map((Type, index) => {
 						return(
-							<li>
-								<SuggestionsContainer
-									SuggestType={Type.SuggestType}
-								></SuggestionsContainer>
+							<li key={index}>
+								<SuggestionsContainer SuggestType={Type.SuggestType} />
 							</li>
 						)
 					})}

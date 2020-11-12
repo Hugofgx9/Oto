@@ -8,7 +8,7 @@ const LastReleaseArtistPage = (props) => {
 			<div>
 				<p>
 					<img className = {styles.LastReleaseIllustration} 
-					src="https://m.media-amazon.com/images/I/91XmfqM1yBL._SS500_.jpg"/>
+					src="https://m.media-amazon.com/images/I/91XmfqM1yBL._SS500_.jpg" alt=""/>
 					
 					<span className = {clsx(styles.corpsTitle, styles.LastReleaseTitle)}>
 					
