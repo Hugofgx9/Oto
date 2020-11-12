@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 
 //STYLE
-import styles from './ComponentStyle/DesktopLMNav.module.scss';
+import styles from '@components/desktop/style/DesktopLMNav.module.scss';
 
 const DesktopLMNav = () => {
 	return (

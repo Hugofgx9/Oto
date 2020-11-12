@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@components/ComponentStyle/LastReleaseArtistPage.module.scss';
+import styles from '@components/desktop/style/LastReleaseArtistPage.module.scss';
 import clsx from 'clsx'
 
 const LastReleaseArtistPage = (props) => {

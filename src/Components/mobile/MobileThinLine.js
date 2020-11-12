@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import styles from '@components/ComponentStyle/MobileThinLine.module.scss';
+import styles from '@components/mobile/style/MobileThinLine.module.scss';
 //import { Link } from 'react-router-dom';
 
 

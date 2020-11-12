@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 //import PropTypes from 'prop-types';
 import styles from '@pages/PagesStyle/DesktopAlbumPage.module.scss';
-import AlbumTracklist from '@components/AlbumTracklist';
+import AlbumTracklist from '@components/desktop/AlbumTracklist';
 
 let currentTracklist = [
 {title: 'Loulou', artist: 'Hupsylon', duration: '3:10'},

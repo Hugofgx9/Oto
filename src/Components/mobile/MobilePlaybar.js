@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import playbuton from '@src/assets/img/play.svg';
 
 //styles
-import styles from './ComponentStyle/MobilePlaybar.module.scss';
+import styles from '@components/mobile/style/MobilePlaybar.module.scss';
 
 const MobilePlaybar = () => {
 	return (

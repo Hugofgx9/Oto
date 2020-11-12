@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@components/ComponentStyle/AlbumArtistPage.module.scss';
+import styles from '@components/desktop/style/AlbumArtistPage.module.scss';
 
 const AlbumArtistPage = (props) => {
 	const { name, year, img} = props;

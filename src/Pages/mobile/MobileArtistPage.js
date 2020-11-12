@@ -3,8 +3,8 @@ import clsx from 'clsx';
 //import { Link } from 'react-router-dom';
 import styles from '@pages/PagesStyle/MobileArtistPage.module.scss';
 
-import MobileButton from '@components/MobileButton.js';
-import MobileThinLine from '@components/MobileThinLine.js';
+import MobileButton from '@components/mobile/MobileButton.js';
+import MobileThinLine from '@components/mobile/MobileThinLine.js';
 
 const albumsOfArtist = [
 	{title: 'Dream But' , img: 'https://www.babelio.com/users/AVT_Jimi-Hendrix_897.jpg' , year: 2018},

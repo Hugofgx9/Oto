@@ -13,8 +13,8 @@ import Media from 'react-media';
 import DesktopArtistPage from '@pages/desktop/DesktopArtistPage.js';
 import DesktopAlbumPage from '@pages/desktop/DesktopAlbumPage.js';
 import DesktopHomePage from '@pages/desktop/DesktopHomePage.js';
-import DesktopLM from '@components/DesktopLM.js';
-import DesktopPlayer from '@components/DesktopPlayer.js';
+import DesktopLM from '@components/desktop/DesktopLM.js';
+import DesktopPlayer from '@components/desktop/DesktopPlayer.js';
 
 //mobile pages
 import MobileArtistPage from '@pages/mobile/MobileArtistPage.js';
@@ -23,7 +23,7 @@ import MobileHomePage from '@pages/mobile/MobileHomePage.js';
 import MobilePlayerPage from '@pages/mobile/MobilePlayerPage.js';
 
 //mobile components
-import MobilePlaybar from '@components/MobilePlaybar.js'
+import MobilePlaybar from '@components/mobile/MobilePlaybar.js'
 
 const App = () => {
   return (

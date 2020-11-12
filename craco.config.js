@@ -6,7 +6,7 @@ module.exports = {
   webpack: {
       alias: {
           '@src': path.join(path.resolve(__dirname, './src')),
-          '@components': path.join(path.resolve(__dirname, './src/Components')),
+          '@components': path.join(path.resolve(__dirname, './src/components')),
           '@pages': path.join(path.resolve(__dirname, './src/Pages')),
       }
   },

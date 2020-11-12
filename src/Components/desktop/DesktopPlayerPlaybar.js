@@ -4,7 +4,7 @@ import React from 'react';
 import playbuton from '@src/assets/img/play.svg';
 
 //styles
-import styles from './ComponentStyle/DesktopPlayerPlaybar.module.scss';
+import styles from '@components/desktop/style/DesktopPlayerPlaybar.module.scss';
 
 const DesktopPlayerPlaybar = () => {
 	return (

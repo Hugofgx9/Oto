@@ -1,7 +1,7 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import styles from '@components/ComponentStyle/TopTitlesArtistPage.module.scss';
+import styles from '@components/desktop/style/TopTitlesArtistPage.module.scss';
 
 const TopTitleArtistPage = (props) => {
 	//const { color } = props;

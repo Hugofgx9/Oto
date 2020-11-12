@@ -2,9 +2,9 @@ import React from 'react';
 //import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
-import TopTitleArtistPage from '@components/TopTitleArtistPage.js';
-import AlbumArtistPage from '@components/AlbumArtistPage.js';
-import LastReleaseArtistPage from '@components/LastReleaseArtistPage.js';
+import TopTitleArtistPage from '@components/desktop/TopTitleArtistPage.js';
+import AlbumArtistPage from '@components/desktop/AlbumArtistPage.js';
+import LastReleaseArtistPage from '@components/desktop/LastReleaseArtistPage.js';
 import styles from '@pages/PagesStyle/DesktopArtistPage.module.scss';
 
 let topTrackArray = [
