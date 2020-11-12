@@ -1,22 +1,22 @@
 import React from 'react';
 //import PropTypes from 'prop-types';
+import clsx from 'clsx';
 import styles from '@components/ComponentStyle/TopTitlesArtistPage.module.scss';
 
-const TitreArtistPage = (props) => {
+const TopTitleArtistPage = (props) => {
 	//const { color } = props;
+	const { img, title, album } = props;
 	return (
 
 			<div>
 
 				<p>
 					<img className  = { styles.IllustrationTopTitreArtistPage}   
-					src=""
+					src={img}
 					alt=""
 					/>
-					 trackName 
-					<span className={styles.corps}>
-						 albumName 
-					</span>
+					<span className={clsx(styles.trackName)}> { title } </span>
+					<span className={clsx(styles.albumName)}>  { album } </span>
 					<span className={styles.add}>
 						 + 
 					</span>
@@ -25,4 +25,4 @@ const TitreArtistPage = (props) => {
 	);
 }
 
-export default TitreArtistPage;
+export default TopTitleArtistPage;

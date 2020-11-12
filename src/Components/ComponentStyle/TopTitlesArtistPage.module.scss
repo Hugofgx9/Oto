@@ -1,11 +1,20 @@
+.trackName{
+    margin-left: 10px;
+}
 .corps{
-        color: $grey3;
-    }
+    color: $grey3;
+    justify-content: start;
+    text-align: right;
+    margin-left: 10px;
+
+}
 .IllustrationTopTitreArtistPage{
     height: 40px;
-    width: 40px;;
+    width: 40px;
+    margin-bottom: 15px;
 }
 .add{
     color : $blue;
 }
+
 

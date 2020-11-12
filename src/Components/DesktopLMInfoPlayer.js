@@ -1,6 +1,7 @@
 import React from 'react';
 //import clsx from 'clsx';
 //import { Link } from 'react-router-dom';
+
 //STYLE
 import styles from './ComponentStyle/DesktopLMInfoPlayer.module.scss';
 
@@ -15,7 +16,7 @@ const DesktopLMInfoPlayer = () => {
 					<h3 className={ styles.corps }>
 						Pink Floyd
 					</h3>
-					<img className={ styles.like } src="../assets/heartfilled.png" alt=""/>
+					{/* <img className={ styles.like } src="./assets/heartfilled.png" alt=""/> */}
 				</div>
 			</div>
 	);

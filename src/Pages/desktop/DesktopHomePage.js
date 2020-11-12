@@ -5,17 +5,15 @@ import styles from '@pages/PagesStyle/DesktopHomePage.module.scss'
 import DesktopLeftMenu from '@components/DesktopLM.js'
 
 let SuggestTypes = [
-	{SuggestType: 'Genres'},
+	{SuggestType: 'Genre'},
 	{SuggestType: 'Ambiance'},
+	{SuggestType: 'Classement'},
 
 ]
 const DesktopHomePage = (props) => {
 	//const { color } = props;
 	return (            
 			<div className={styles.DesktopHomePage} >
-				<div>
-				<DesktopLeftMenu/> 
-				</div>
 				<ul>
 					{SuggestTypes.map((Type, index) => {
 						return(

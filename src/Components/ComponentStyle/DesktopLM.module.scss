@@ -1,13 +1,15 @@
 .DesktopLMGrid{
+    height: 100%;
+    width: $LM-width;
     position: fixed;
     background-color: $grey1;
     z-index: 10;
-    top: 0;
+    bottom: 0;
     left: 0;
     color: $greyLight;
   	display: grid;
-	grid-template-columns: 220px;
-    grid-template-rows: 65vh 35vh;
+	grid-template-columns: auto;
+    grid-template-rows: 1fr 240px;
     text-align: center;
 
     // .NavGrid{

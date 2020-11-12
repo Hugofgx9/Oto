@@ -1,0 +1,13 @@
+.DesktopPBGrid{
+    height: 90px;
+    width: calc(100vw - 220px);
+    position: fixed;
+    background-color: $grey1;
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+    color: $greyLight;
+    display: grid;
+	grid-template-columns: auto auto 150px;
+    grid-template-rows: auto;
+}

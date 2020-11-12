@@ -25,9 +25,9 @@ let TopSuggest = [
 ]
 
 let GlobalSuggest = {
-	Genres: GenreSuggest,
+	Genre: GenreSuggest,
 	Ambiance: AmbianceSuggest,
-	Top: TopSuggest,
+	Classement: TopSuggest,
 }
 
 

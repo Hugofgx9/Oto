@@ -1,67 +1,87 @@
-
-.DesktopArtistPage {
-
-	background-color: $grey2;
-	display: grid;
-	grid-template-rows: 4;
-	grid-template-columns: 40vw auto;
-
-	.title{
-		color : $greyLight;
-	}
-
-	.ArtistName {
-		grid-row: 1;
-		grid-column: 1;
-		background-color: sienna;;
-	}
-	.TopTitresArtist {
-		grid-row: 2/3;
-		grid-column: 2/4;
-		background-color: red;
-	}
-	.AlbumsArtistPage{
-		grid-row: 3/4;
-		grid-column: 1/3;
-		background-color: salmon;
-	}
-	.DerniereSortieArtistPage{
-		grid-row: 2/3;
-		grid-column: 1/2;
-		background-color: seagreen;
-	}
-	.ListeTopTitres{
-		font-family: 'Helvetica Regular';
-  		color: $greyLight;
-  		font-size: 12px;
-	}
-	.ListeAlbums{
-		display: flex;
-		font-family: 'Helvetica Regular';
-		text-align: center;
-  		color: $greyLight;
-  		font-size: 12px;
-	}
-
-}
-
-.ArtistBannerWrap{
-	overflow: hidden;
-	height: 200px;
-	/*
-	display: flex;
-	
-	align-items: center; 
-	
-	justify-content: center;
-	*/
-	
-	img{
-		width: 100%;
-		height: auto;
-	}
-}
-
-.insertionMenu{
+.artistPage{
 	margin-left: 220px;
+	margin-bottom: 200px;
+
+	.artistBannerWrap{
+		overflow: hidden;
+		height: 250px;
+		/*
+		display: flex;
+		align-items: center; 
+		justify-content: center;
+		*/
+		
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	.artistPageContent {
+		margin-left: $margin;
+		margin-right: $margin;
+
+		.artistName {
+			width: 40%;
+			min-width: 300px;
+			margin-top: 20px;
+			margin-bottom: 40px;
+			padding-bottom: 15px;
+			border-bottom: 1px solid $grey3;
+		}
+
+		.releaseAndTrackSection {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+
+			.lastRelease{	
+			}
+
+			.topTracks {
+				.categoryTopTitres{
+					margin-bottom: 15px;
+				}
+
+				.listeTopTitres{
+					font-size: 12px;
+					display: grid;
+					grid-template-rows: auto auto auto;
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+		}
+
+		.albumsSection {
+			width: 100%;
+
+			.albumsListWrap {
+				box-sizing:border-box;
+				overflow: hidden;
+
+				.albumsList{
+					display: grid;
+					grid-auto-flow: column;
+
+					//vw whitout leftmenu
+					@function bettervw($vw) {
+						$new-window: calc(100vw - (#{$LM-width} + 2 * #{$margin}));
+					  $result: calc(#{$new-window} / 100 * #{$vw});
+					  @return $result;
+					}
+
+					img {
+						background-color: red;
+				/* 	width: 9vw;
+						height: 9vw;
+						margin-right: 4.5vw;
+						calc to have value in vw - LeftMenu 
+						margin-right: calc( (100vw - #{$LM-width}) / 100 * 4.5 ); */
+						margin-right: bettervw(5.2);
+						width: bettervw(12);
+						height: bettervw(12);
+
+					}
+				}
+			}
+		}
+	}
 }
