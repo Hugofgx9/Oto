@@ -55,7 +55,7 @@ const DesktopArtistPage = (props) => {
 						<ul className = {styles.listeTopTitres}>
 							{ topTrackArray.map((track, index) => {
 									return (
-										<li className= {styles.greyLight}>
+										<li key={index} className= {styles.greyLight}>
 											<TopTitleArtistPage title={track.title} img={track.img}/>
 										</li>
 									)
@@ -73,7 +73,7 @@ const DesktopArtistPage = (props) => {
 						<ul className = {styles.albumsList}>
 							{ allAlbumsArray.map((album, index) => {
 									return(
-										<li>
+										<li key={index}>
 											<AlbumArtistPage name={album.title} year="" img={album.img}/>
 										</li>
 									)
