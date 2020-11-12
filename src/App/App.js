@@ -60,9 +60,7 @@ const App = () => {
                 <DesktopLM/>
                 <DesktopPlayer/>
                 <Switch>
-                  <Route exact path="/">
-                    <DesktopHomePage/>
-                  </Route>
+                  <Route exact path="/" component={DesktopHomePage}/>
                   <Route path="/artist">
                     <DesktopArtistPage/>
                   </Route>
