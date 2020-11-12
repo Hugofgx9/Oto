@@ -1,7 +1,11 @@
 import React from 'react';
+import clsx from 'clsx';
+
+//SVG
+import playbuton from '@src/assets/img/play.svg';
+
 //styles
 import styles from './ComponentStyle/MobilePlaybar.module.scss';
-import clsx from 'clsx';
 
 const MobilePlaybar = () => {
 	return (
@@ -15,6 +19,9 @@ const MobilePlaybar = () => {
             </div>
             <div className={ clsx(styles.artistPlayedTrack, styles.corps)}>
                 Pink Floyd
+            </div>
+            <div className={styles.playbuton}>
+                <img src={playbuton} alt="playbuton" />
             </div>
 
         </div>
