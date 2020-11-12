@@ -1,14 +1,40 @@
-.LastReleaseIllustration{
-        height: 175px ;
-        width: 175px;
-    }   
+.LastReleaseArtistPage{
+    
+    display: grid;
+	grid-template-rows: 4;
+	grid-template-columns: 2;
 
-    .corps{
+	.CoverLastRelease{
+        height: 175px;
+        width: 175px;
+		grid-row: 1/5;
+		grid-column: 1/2;
+	}
+	.LastRelease{
+        margin-left: 15px;
+        grid-row: 1/2;
+		grid-column: 2/3;
+	}
+	.TitleLastRelease{
+        margin-left: 15px;
+        margin-right: 150px;
+		grid-row: 2/3;
+		grid-column: 2/3;
+	}
+	.ArtistLastRelease{
+        margin-left: 15px;
+		grid-row: 3/4;
+		grid-column: 2/3;
+	}
+	.DateLengthLastRelease{
+        margin-left: 15px;
+		grid-row: 4/5;
+		grid-column: 2/3;
+	}
+     .corps{
         color: $grey3;
     }
-
-    .LastReleaseTitle{
-        display: inline-block;
-    }
+}
+        
 
 
