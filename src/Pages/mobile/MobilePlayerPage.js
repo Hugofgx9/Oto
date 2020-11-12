@@ -2,12 +2,12 @@ import React from 'react';
 import clsx from 'clsx';
 
 import styles from '@pages/PagesStyle/MobilePlayerPage.module.scss';
-
+import MobileButton from '@components/MobileButton.js';
 
 
 
 const MobilePlayerPage = (props) => {
-    const { trackImg } = props
+    const { trackImg, likeIc, repeatIc, shuffleIc } = props
     return(
         <div className={styles.playerPage}>
             <div className={styles.upPart}>
@@ -36,9 +36,16 @@ const MobilePlayerPage = (props) => {
             </div>
             <div className={styles.downPart}>
                 <div className={styles.controler}>
-                    <div> Like </div>
-                    <div> Repeat </div>
-                    <div> Suffle </div>
+                    <div className={ clsx( styles.playBtn) }>
+						<MobileButton>Play</MobileButton>
+					</div>
+                    <div className={ clsx( styles.playBtn) }>
+						<MobileButton>Shuffle</MobileButton>
+					</div>
+                    <div className={ clsx( styles.playBtn) }>
+						<MobileButton>Repeat</MobileButton>
+					</div>
+                    <div></div>
                 </div>
                 <div>
                     ho

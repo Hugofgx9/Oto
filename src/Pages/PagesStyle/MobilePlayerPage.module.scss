@@ -35,11 +35,11 @@
         display: grid;
         grid-template-columns: $mobile-grid;
         .controler{
+            color: $blue ;
             div{
                 color: $greyLight;
             }
-            display: grid;
-            grid-template-rows: 1fr 1fr 1fr ;
+        
             background-color: $grey1;
         }
     }
