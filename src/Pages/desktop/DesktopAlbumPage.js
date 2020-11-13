@@ -8,7 +8,7 @@ import AlbumTracklist from '@components/desktop/AlbumTracklist';
 
 const msToHMS = ( ms ) => {
   let seconds = ms / 1000;
-  let hours = parseInt( seconds / 3600 );
+  //let hours = parseInt( seconds / 3600 );
   seconds = seconds % 3600;
   let minutes = parseInt( seconds / 60 ); 
   seconds = seconds % 60;
