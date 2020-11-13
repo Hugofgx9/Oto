@@ -1,5 +1,5 @@
 import React from 'react';
-import Suggestion from './ItemSuggestion-DesktopHomePage'
+import ItemSuggestion from './ItemSuggestion-DesktopHomePage'
 
 import styles from '@pages/PagesStyle/DesktopHomePage.module.scss'
 
@@ -31,7 +31,7 @@ let GlobalSuggest = {
 }
 
 
-const DesktopHomePage = (props) => {
+const SuggestionContainer = (props) => {
 	const { SuggestType } = props;
 	return (
 			<div className={styles.SuggestContainer} >
@@ -42,7 +42,7 @@ const DesktopHomePage = (props) => {
 					{GlobalSuggest[SuggestType].map((Items, index) =>{
 						return (
 							<li key={index} >
-								<Suggestion ItemTitle={Items.ItemTitle} />
+								<ItemSuggestion ItemTitle={Items.ItemTitle} />
 							</li>
 						)
 					})}
@@ -52,4 +52,4 @@ const DesktopHomePage = (props) => {
 	);
 }
 
-export default DesktopHomePage;
+export default SuggestionContainer;
