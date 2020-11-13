@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import styles from '@pages/PagesStyle/MobileAlbumPage.module.scss';
 
 import MobileButton from '@components/mobile/MobileButton.js';
-import MobilePlaybar from '@components/mobile/MobilePlaybar.js';
+import MobileThinLine from '@components/mobile/MobileThinLine.js';
 
 let albumTracklist = [
 	{title: 'firstTrack'},
@@ -26,21 +26,28 @@ const MobileAlbumPage = () => {
 				</div>
 			</div>
 			<div className={ clsx(styles.content) }>
-				<h3 className={ clsx(styles.title3, styles.blue) }>Hendrix</h3>
-				<span> {albumTracklist.length} - 2020</span>
+				<div className={ clsx(styles.infoAndArtist)}>
+					<div>
+						<h3 className={ clsx(styles.corps, styles.blue) }>Hendrix</h3>
+						<span className= { clsx(styles.infoAlbum, styles.grey3)}> {albumTracklist.length} titres - 2020</span>
+					</div>
+				</div>
+				<MobileThinLine className={ clsx( styles.separateTracklist )}/>
 				<ul>
 					{ albumTracklist.map(( track, index ) => {
 						return (
 							<li key={index}> 
-								<span> {index} </span>
-								<span> {track.title} </span>
+								<div>
+									<span className={ styles.grey3 }> {index} </span>
+									<span> {track.title} </span>
+								</div>
+								<MobileThinLine/>
 							</li>
 							)
 						}
 					)}
 				</ul>
 			</div>
-			<MobilePlaybar/>
 		</div>
 	);
 }

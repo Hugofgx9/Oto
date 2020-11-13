@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 //SVG
 import playbuton from '@src/assets/img/play.svg';
@@ -12,12 +12,22 @@ import aleatoire from '@src/assets/img/aleatoire.svg';
 import styles from '@components/desktop/style/DesktopPlayerPlaybar.module.scss';
 
 const DesktopPlayerPlaybar = () => {
+
+    const [isPlay, setPlay] = useState(false);
+
 	return (
         <div className={ styles.playbar}>
             <img src={boucle} alt="boucle" className={ styles.boucle}/>
             <img src={precedent} alt="precedent" className={ styles.precedent}/>
-            <img src={playbuton} alt="playbuton" className={ styles.playbuton}/>
-            {/* <img src={pause} alt="pause" /> */}
+            <button onClick={() => setPlay(!isPlay)} className={ styles.playbuton} >
+                {  /*!isPlay && 
+                    <img src={playbuton} alt="playbuton"/>
+                     isPlay && 
+                     variable ? if(true) : else 
+                    <img src={pause} alt="pause" />*/
+                }
+                { isPlay ? <img src={pause} alt="pause" /> : <img src={playbuton} alt="playbuton"/> }
+            </button>
             <img src={suivant} alt="suivant" className={ styles.suivant}/>
             <img src={aleatoire} alt="aleatoire" className={ styles.aleatoire}/>
             <div className={ styles.slidecontainer }>

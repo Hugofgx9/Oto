@@ -5,15 +5,14 @@ import styles from '@pages/PagesStyle/DesktopAlbumPage.module.scss';
 import AlbumTracklist from '@components/desktop/AlbumTracklist';
 
 let currentTracklist = [
-{title: 'Loulou', artist: 'Hupsylon', duration: '3:10'},
-{title: 'Deuxieme', artist: 'Hupsylon', duration: '3:10'},
-{title: 'Troisieme', artist: 'Hupsylon', duration: '3:10'},
-{title: 'Quatrieme', artist: 'Hupsylon', duration: '3:10'},
-{title: 'Cinquieme', artist: 'Hupsylon', duration: '00:00:00'},
-{title: 'Sixieme', artist: 'Hupsylon', duration: '3:10'},
-{title: 'Septieme', artist: 'Hupsylon', duration: '3:10'},
+{title: 'BOSS', artist: 'Johnny', duration: '3:10'},
+{title: 'Deuxieme', artist: 'Johnny', duration: '3:10'},
+{title: 'Troisieme', artist: 'Johnny', duration: '3:10'},
+{title: 'Quatrieme', artist: 'Johnny', duration: '3:10'},
+{title: 'Cinquieme', artist: 'Johnny', duration: '00:00:00'},
+{title: 'Sixieme', artist: 'Johnny', duration: '3:10'},
+{title: 'Septieme', artist: 'Johnny', duration: '3:10'},
 ];
-
 
 const DesktopAlbumPageStatic = (props) => {
 

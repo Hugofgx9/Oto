@@ -12,14 +12,14 @@ let categories = [
 ]
 
 let genreEl = [
-	{title: 'Techno', img: ''},
-	{title: 'Ambiance', img: ''},
-	{title: 'Pop', img: ''},
-	{title: 'Chant', img: ''},
-	{title: 'Techno', img: ''},
-	{title: 'Ambiance', img: ''},
-	{title: 'Pop', img: ''},
-	{title: 'Chant', img: ''}
+	{title: 'Techno', img: 'https://images.unsplash.com/photo-1496208612508-eb52fba7d94e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'},
+	{title: 'Ambiance', img: 'https://images.unsplash.com/photo-1554114835-7586b5ca72be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'},
+	{title: 'Pop', img: 'https://images.unsplash.com/photo-1594882798546-724755e85978?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'},
+	{title: 'Chant', img: 'https://images.unsplash.com/photo-1556296569-44d434fb28d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'},
+	{title: 'Techno', img: 'https://images.unsplash.com/photo-1496208612508-eb52fba7d94e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'},
+	{title: 'Ambiance', img: 'https://images.unsplash.com/photo-1554114835-7586b5ca72be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'},
+	{title: 'Pop', img: 'https://images.unsplash.com/photo-1594882798546-724755e85978?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'},
+	{title: 'Chant', img: 'https://images.unsplash.com/photo-1556296569-44d434fb28d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'}
 ]
 
 const MobileHomePage = () => {

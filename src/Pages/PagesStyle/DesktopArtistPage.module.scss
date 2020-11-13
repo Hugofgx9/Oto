@@ -1,15 +1,14 @@
 .artistPage{
-	margin-left: 220px;
-	margin-bottom: 200px;
+	margin-left: $LM-width;
+	margin-bottom: calc(#{$PlayBar-width} + #{$margin});
 
 	.artistBannerWrap{
 		overflow: hidden;
 		height: 250px;
-		/*
 		display: flex;
 		align-items: center; 
 		justify-content: center;
-		*/
+
 		
 		img{
 			width: 100%;
@@ -69,7 +68,6 @@
 					}
 
 					img {
-						background-color: red;
 				/* 	width: 9vw;
 						height: 9vw;
 						margin-right: 4.5vw;
