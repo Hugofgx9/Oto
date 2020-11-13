@@ -35,9 +35,9 @@ const MobilePlaybar = () => {
                 </span>
             
                 <div className={styles.button}>
-                    <img src={homebutton} alt="homebutton" />
-                    <img src={queuebutton} alt="queuebutton" />
-                    <img src={searchbutton} alt="searchbutton" />
+                    <img className={styles.homebutton} src={homebutton} alt="homebutton" />
+                    <img className={styles.searchbutton} src={searchbutton} alt="searchbutton" />
+                    <img className={styles.queuebutton} src={queuebutton} alt="queuebutton" />
 
                 </div>
             </div>
