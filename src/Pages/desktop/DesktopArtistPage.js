@@ -1,4 +1,6 @@
-import React from 'react';
+import { useParams } from 'react-router-dom';
+import React, { useContext, useState, useEffect } from 'react';
+import { SpotifyContext } from '@components/SpotifyProvider';
 //import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
@@ -32,15 +34,65 @@ let allAlbumsArray= [
 ]
 
 const DesktopArtistPage = (props) => {
-	//const { color } = props;
+	const params = useParams();
+
+	const { spotifyApi } = useContext(SpotifyContext);
+	// const [artistID, setArtistID] = useState("");
+	// const [albumID, setAlbumID] = useState("");
+	const [artist, setArtist] = useState({
+		albums: [],
+	});
+
+	useEffect(() => {
+		let artistID ="";
+		let albums = {};
+		let lastRelease = {};
+		let obj = {};
+			const searchArtist = async () => {
+				const result = await spotifyApi.searchArtists(params.id, {limit: 1})
+				obj.name = result.artists.items[0].name;
+				obj.id = result.artists.items[0].id;
+				obj.img = result.artists.items[0].images[0].url;
+
+				searchAlbums(result.artists.items[0].id);
+				//lastRelease();
+			};
+			const searchAlbums = async (artistID) => {
+				const result = await spotifyApi.getArtistAlbums(artistID, {limit: 6});
+				albums = [];
+				result.items.forEach((item, index) => {
+					albums[index] = {};
+					loadAlbum(item.id, index)
+				});
+				obj.albums = albums;
+				setArtist(obj);
+				console.log(obj.albums[0].name);
+			};
+			const searchLastRelease = async () => {
+				const result = await spotifyApi.getArtistAlbums(artistID, {limit: 1});
+				//result.name;
+
+				//result.items[0]
+			};
+			const loadAlbum = async (id, arrayIndex) => {
+				const result2 = await spotifyApi.getAlbum(id)
+				albums[arrayIndex].id = result2.id;
+				albums[arrayIndex].name = result2.name;
+				albums[arrayIndex].img = result2.images[1].url;
+			}
+			searchArtist();
+	}, [spotifyApi])
+
+
+
 	return (
 		<div className={styles.artistPage}>
 			<div className ={styles.artistBannerWrap} >
-				<img src="https://scontent.fcdg3-1.fna.fbcdn.net/v/t1.0-9/100927022_10156887336900780_4584604578883829760_o.jpg?_nc_cat=106&ccb=2&_nc_sid=09cbfe&_nc_ohc=Feq_qezjCZQAX82hSlc&_nc_ht=scontent.fcdg3-1.fna&oh=85eaad7a04ebbda0a98be2f81faa094e&oe=5FD2C40D" alt=""/>
+				<img src={artist.img} alt=""/>
 			</div>
 
 			<div className = {styles.artistPageContent}>
-				<h2 className = {clsx(styles.artistName, styles.title, styles.greyLight)}> Fall Out Boy </h2>
+				<h2 className = {clsx(styles.artistName, styles.title, styles.greyLight)}> {artist.name} </h2>
 				<div className = {styles.releaseAndTrackSection} >
 					<div className = {styles.lastRelease} >
 						<div className = {clsx(styles.corps, styles.albumArtistPage)}>
@@ -71,10 +123,10 @@ const DesktopArtistPage = (props) => {
 					</h2>
 					<div className={ styles.albumsListWrap }>
 						<ul className = {styles.albumsList}>
-							{ allAlbumsArray.map((album, index) => {
+							{ artist.albums.map((album) => {
 									return(
-										<li key={index}>
-											<AlbumArtistPage name={album.title} year="" img={album.img}/>
+										<li key={album.id}>
+											<AlbumArtistPage name={album.name} year="" img={album.img}/>
 										</li>
 									)
 								}
