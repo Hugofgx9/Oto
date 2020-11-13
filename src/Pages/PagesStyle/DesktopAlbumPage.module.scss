@@ -2,6 +2,7 @@
 	margin-top: 50px;
 	margin-left: calc(#{$LM-width} + #{$margin});
 	margin-right: $margin;
+	margin-bottom: calc(#{$PlayBar-width} + #{$margin});
 	color: $white;
 	display: grid;
 	grid-template-rows: auto 20px auto;
