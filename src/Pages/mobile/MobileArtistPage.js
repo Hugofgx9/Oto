@@ -3,8 +3,8 @@ import clsx from 'clsx';
 //import { Link } from 'react-router-dom';
 import styles from '@pages/PagesStyle/MobileArtistPage.module.scss';
 
-import MobileButton from '@components/MobileButton.js';
-import MobileThinLine from '@components/MobileThinLine.js';
+import MobileButton from '@components/mobile/MobileButton.js';
+import MobileThinLine from '@components/mobile/MobileThinLine.js';
 
 const albumsOfArtist = [
 	{title: 'Dream But' , img: 'https://www.babelio.com/users/AVT_Jimi-Hendrix_897.jpg' , year: 2018},
@@ -33,18 +33,21 @@ const MobileArtistPage = () => {
 			<div className={ clsx(styles.grid ,styles.secondPart) } >
 				<div className={ clsx(styles.centerContent, styles.greyLight)}>
 
-					<div  className={ clsx(styles.lastProject)} >
+					<div  className={ clsx(styles.lastProject, styles.section)} >
 						<h3 className={ clsx(styles.title2) }>Dernières Sorties</h3>
 						<img src="https://www.babelio.com/users/AVT_Jimi-Hendrix_897.jpg" alt=""/>
 						<div className={ styles.projectInfo} >
 							<h4>Nom Album</h4>
 							<span>2020 - 1 titre</span>
 						</div>
-						<MobileThinLine className={ styles.sectionBorders }/>
 					</div>
 
-					<div className={ clsx(styles.topTrack)} >
+					<div className={ clsx(styles.topTrack, styles.section)} >
+						<div className={ styles.sectionBorders }>
+							<MobileThinLine/>
+						</div>
 						<h3 className={ clsx(styles.title2) }>Top Titres</h3>
+						<MobileThinLine/>
 						<ul>
 							{	topTrack.map((track, index) => {
 									return(
@@ -56,10 +59,12 @@ const MobileArtistPage = () => {
 								}
 							)}
 						</ul>
-						<MobileThinLine className={ styles.sectionBorders }/>	
 					</div>
 
-					<div className={ clsx(styles.albumsList)} >
+					<div className={ clsx(styles.albumsList, styles.section)} >
+						<div className={ styles.sectionBorders }>
+							<MobileThinLine/>
+						</div>
 						<h3 className={ clsx(styles.title2) }>Albums</h3>
 						<ul>
 							{ albumsOfArtist.map((album, index) => {
@@ -73,7 +78,6 @@ const MobileArtistPage = () => {
 								}
 							)}
 						</ul>
-						margin = ( width - (imgwidth/3) ) / 2
 					</div>
 				</div>
 			</div>

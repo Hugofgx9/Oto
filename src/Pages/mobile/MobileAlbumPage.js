@@ -3,8 +3,8 @@ import clsx from 'clsx';
 //import { Link } from 'react-router-dom';
 import styles from '@pages/PagesStyle/MobileAlbumPage.module.scss';
 
-import MobileButton from '@components/MobileButton.js';
-import MobilePlaybar from '@components/MobilePlaybar.js';
+import MobileButton from '@components/mobile/MobileButton.js';
+import MobilePlaybar from '@components/mobile/MobilePlaybar.js';
 
 let albumTracklist = [
 	{title: 'firstTrack'},

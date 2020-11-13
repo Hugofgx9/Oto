@@ -3,11 +3,11 @@ import React from 'react';
 //import { Link } from 'react-router-dom';
 
 //STYLES
-import styles from './ComponentStyle/DesktopLM.module.scss';
+import styles from '@components/desktop/style/DesktopLM.module.scss';
 
 //COMPONENTS
-import DesktopLMNav from '@components/DesktopLMNav.js'
-import DesktopLMInfoPlayer from '@components/DesktopLMInfoPlayer.js'
+import DesktopLMNav from '@components/desktop/DesktopLMNav.js'
+import DesktopLMInfoPlayer from '@components/desktop/DesktopLMInfoPlayer.js'
 
 
 const DesktopLM = (props) => {

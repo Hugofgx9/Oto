@@ -1,11 +1,11 @@
 import React from 'react';
 
 //styles
-import styles from './ComponentStyle/DesktopPlayer.module.scss';
+import styles from '@components/desktop/style/DesktopPlayer.module.scss';
 
 //COMPONENTS
-import DesktopPlayerPlaybar from '@components/DesktopPlayerPlaybar.js'
-import DesktopPlayerSoundbar from '@components/DesktopPlayerSoundbar.js'
+import DesktopPlayerPlaybar from '@components/desktop/DesktopPlayerPlaybar.js'
+import DesktopPlayerSoundbar from '@components/desktop/DesktopPlayerSoundbar.js'
 
 const DesktopPlayer = () => {
 	return (

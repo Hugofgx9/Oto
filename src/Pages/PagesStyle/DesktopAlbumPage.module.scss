@@ -1,6 +1,6 @@
 .albumPageContainer {
-	margin-top: 200px;
-	margin-left: 200px;
+	margin-top: 50px;
+	margin-left: calc(#{$LM-width} + #{$margin});
 	margin-right: $margin;
 	color: $white;
 	display: grid;
@@ -10,7 +10,7 @@
 	//pass to albumtracklist's props and headerMenu
 	.gridTrackList {
 		display: grid;
-		grid-template-columns: 3fr 21fr 15fr 10fr 8fr;
+		grid-template-columns: 3fr 21fr 15fr 1fr 8fr;
 	}
 
 	img {
