@@ -32,24 +32,22 @@
       .CCButon{
         border: 2px;
         border-color: $grey3;
-        padding: 14px 28px;
+        padding: 12px 15px;
         font-size: 16px;
         cursor: pointer;
-        display: inline-block;
+        // display: inline-block;
       }
     }
 
     .live{
       grid-column: 1;
       grid-row: 5;
-
       .liveButon{
-        border: 2px;
-        border-color: $grey3;
-        padding: 14px 28px;
+        padding: 12px 15px;
         font-size: 16px;
         cursor: pointer;
-        display: inline-block;
+        // display: inline-block;
+
       }
     }
 
@@ -74,5 +72,9 @@
       right: 0;
       top: 0;
       z-index: -1;
+    }
+
+    button{
+      background-color: $grey2;
     }
 }
