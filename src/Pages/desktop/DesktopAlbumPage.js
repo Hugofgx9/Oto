@@ -1,38 +1,81 @@
-import React from 'react';
+import { useParams } from 'react-router-dom';
+import React, { useContext, useState, useEffect } from 'react';
+import { SpotifyContext } from '@components/SpotifyProvider';
 import clsx from 'clsx';
 //import PropTypes from 'prop-types';
 import styles from '@pages/PagesStyle/DesktopAlbumPage.module.scss';
 import AlbumTracklist from '@components/desktop/AlbumTracklist';
 
-let currentTracklist = [
-{title: 'Loulou', artist: 'Hupsylon', duration: '3:10'},
-{title: 'Deuxieme', artist: 'Hupsylon', duration: '3:10'},
-{title: 'Troisieme', artist: 'Hupsylon', duration: '3:10'},
-{title: 'Quatrieme', artist: 'Hupsylon', duration: '3:10'},
-{title: 'Cinquieme', artist: 'Hupsylon', duration: '00:00:00'},
-{title: 'Sixieme', artist: 'Hupsylon', duration: '3:10'},
-{title: 'Septieme', artist: 'Hupsylon', duration: '3:10'},
-];
+const msToHMS = ( ms ) => {
+  let seconds = ms / 1000;
+  let hours = parseInt( seconds / 3600 );
+  seconds = seconds % 3600;
+  let minutes = parseInt( seconds / 60 ); 
+  seconds = seconds % 60;
+  seconds = Math.round(seconds);
+  return( minutes+":"+seconds);
+}
 
 const DesktopAlbumPage = (props) => {
-	//const { color } = props;
+	const params = useParams();
+
+  const { spotifyApi } = useContext(SpotifyContext);
+	// const [artistID, setArtistID] = useState("");
+	// const [albumID, setAlbumID] = useState("");
+  const [album, setAlbum] = useState({
+  														tracklist: [], 
+  														name: null,
+  														img: null,
+  														artist: null,
+  														date: ""});
+
+//RAM : "4m2880jivSbbyEGAKfITCa"
+//daft : "4tZwfgrHOc3mvqYlEYSvVi"
+
+  useEffect(() => {
+  let artistID ="";
+  let albumID ="";
+  	const searchArtist = async () => {
+  		const result = await spotifyApi.searchArtists(params.id, {limit: 1})
+  		artistID = result.artists.items[0].id;
+  		console.log(result);
+  		searchAlbum();
+  	};
+  	const searchAlbum = async () => {
+  		const result = await spotifyApi.getArtistAlbums(artistID, {limit: 1});
+  		albumID = result.items[0].id;
+  		loadAlbum();
+  	};
+    const loadAlbum = async () => {
+      const result = await spotifyApi.getAlbum(albumID)
+      setAlbum({
+				tracklist: result.tracks.items, 
+				name: result.name,
+				img: result.images[1].url,
+				artist:	result.artists[0].name,
+				date: result.release_date
+      });
+    }
+    searchArtist();
+  }, [spotifyApi])
+
 	return (
 			<div className={ styles.albumPageContainer }>
-				<img src="https://images-na.ssl-images-amazon.com/images/I/710ZkhTLgJL._SY355_.jpg" alt=""/>
+				<img src={album.img} alt=""/>
 				<div className={ styles.albumInfo }>
-					<h2 className={ clsx(styles.title, styles.greyLight) }>Mania</h2>
+					<h2 className={ clsx(styles.title, styles.greyLight) }> {album.artist} </h2>
 					<div className={ clsx(styles.bottomAlign) }>
-						<h3 className={ clsx(styles.title2, styles.blue) }>Fall out Boy</h3>
+						<h3 className={ clsx(styles.title2, styles.blue) }> {album.name} </h3>
 						<div className= { clsx(styles.genreAndDate, styles.grey3) }>
 							<h3 className={ styles.corps }>Alternative</h3>
 							<span> - </span>
-							<h3 className={ styles.corps }>2018</h3>
+							<h3 className={ styles.corps }> {album.date.slice(0,4)} </h3>
 						</div>
 					</div>
 				</div>
 				<div className={ clsx(styles.albumInfo2)}>
 					<p>
-						<span> {currentTracklist.length}, 20 minutes</span>
+						<span> {album.tracklist.length}, 20 minutes</span>
 					</p>
 					<span className={ styles.blue } > Lecture aléatoire </span>
 				</div>
@@ -42,14 +85,18 @@ const DesktopAlbumPage = (props) => {
 					<span>Durée</span>
 				</div>
 				<ul>
-					{currentTracklist.map((track, index) => {
+					{album.tracklist.map((track, index) => {
 						return (
 							<li key={index}>
 								<AlbumTracklist 
 									nb={index} 
-									title={track.title} 
-									artist={track.artist}
-									duration={track.duration} 
+									title={track.name} 
+									artist={track.artists.map((artist, index) => {
+										return (
+											artist.name
+										)
+									})}
+									duration={msToHMS(track.duration_ms)} 
 									gridClass={ styles.gridTrackList }
 								/>
 							</li>
