@@ -76,9 +76,9 @@ const Router = () => {
                   <Route path="/album/:id">
                     <SpotifyAlbum/>
                   </Route>
-                  <Route path="/album">
+{/*                  <Route path="/album">
                     <DesktopAlbumPageStatic/>
-                  </Route>
+                  </Route>*/}
                   {/* <Route path="/leftmenu">
                     <DesktopLM/>
                   </Route> */}
