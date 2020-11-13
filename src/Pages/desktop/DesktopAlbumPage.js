@@ -19,8 +19,9 @@ const msToHMS = ( ms ) => {
 const DesktopAlbumPage = (props) => {
 	const params = useParams();
 
-  const { spotifyApi } = useContext(SpotifyContext)
-	const [artist, setArtist] = useState("");
+  const { spotifyApi } = useContext(SpotifyContext);
+	// const [artistID, setArtistID] = useState("");
+	// const [albumID, setAlbumID] = useState("");
   const [album, setAlbum] = useState({
   														tracklist: [], 
   														name: null,
@@ -32,19 +33,21 @@ const DesktopAlbumPage = (props) => {
 //daft : "4tZwfgrHOc3mvqYlEYSvVi"
 
   useEffect(() => {
+  let artistID ="";
+  let albumID ="";
   	const searchArtist = async () => {
   		const result = await spotifyApi.searchArtists(params.id, {limit: 1})
+  		artistID = result.artists.items[0].id;
   		console.log(result);
-  		setArtist(result.artists.items[0].id);
   		searchAlbum();
-	    loadAlbum();
   	};
   	const searchAlbum = async () => {
-  		const result = await spotifyApi.getArtistAlbums(artist);
-  		console.log(result);
+  		const result = await spotifyApi.getArtistAlbums(artistID, {limit: 1});
+  		albumID = result.items[0].id;
+  		loadAlbum();
   	};
     const loadAlbum = async () => {
-      const result = await spotifyApi.getAlbum("4m2880jivSbbyEGAKfITCa")
+      const result = await spotifyApi.getAlbum(albumID)
       setAlbum({
 				tracklist: result.tracks.items, 
 				name: result.name,
