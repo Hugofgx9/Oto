@@ -8,6 +8,9 @@ const DesktopPlayerSoundbar = () => {
 	return (
         <div className={ styles.soundbar}>
             <img src={soundbuton} alt="soundbuton" />
+            <div className={ styles.slidecontainer }>
+                <input type="range" min="1" max="100" className={ styles.slider }/>
+            </div>
         </div>
     );
 }
