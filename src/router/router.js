@@ -72,7 +72,7 @@ const Router = () => {
                   <Route exact path="/" >
                     <DesktopHomePage/>
                   </Route>
-                  <Route path="/artist">
+                  <Route path="/artist/:id">
                     <DesktopArtistPage/>
                   </Route>
                   <Route path="/album/:id">
