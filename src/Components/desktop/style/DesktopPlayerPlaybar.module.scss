@@ -1,3 +1,28 @@
 .playbar{
     align-self: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 50px 1fr;
+    align-items: center;
+
+    .boucle{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .suivant{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .playbuton{
+        grid-column: 3;
+        grid-row: 1;
+    }
+    .precedent{
+        grid-column: 4;
+        grid-row: 1;
+    }
+    .aleatoire{
+        grid-column: 5;
+        grid-row: 1;
+    }
 }
