@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 //import PropTypes from 'prop-types';
 import styles from '@pages/PagesStyle/DesktopAlbumPage.module.scss';
