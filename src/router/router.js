@@ -12,6 +12,7 @@ import Media from 'react-media';
 
 //desktop pages
 import DesktopArtistPage from '@pages/desktop/DesktopArtistPage.js';
+import DesktopArtistPageStatic from '@pages/desktop/DesktopArtistPageStatic.js';
 import DesktopAlbumPage from '@pages/desktop/DesktopAlbumPage.js';
 import DesktopAlbumPageStatic from '@pages/desktop/DesktopAlbumPageStatic.js';
 import DesktopHomePage from '@pages/desktop/DesktopHomePage.js';
@@ -27,7 +28,6 @@ import MobilePlayerPage from '@pages/mobile/MobilePlayerPage.js';
 
 //mobile components
 import MobilePlaybar from '@components/mobile/MobilePlaybar.js'
-import SpotifyAlbum from '@components/Spotify/spotifyAlbum.js';
 
 
 
@@ -40,28 +40,31 @@ const Router = () => {
         <Media queries={{ small: { maxWidth: 599 } }}>
           {matches =>
             matches.small ? (
-              <Switch>
-                <Route exact path="/">
-                  <MobileHomePage/>
-                </Route>
-                <Route path="/artist">
-                  <MobileArtistPage/>
-                </Route>
-                <Route path="/album">
-                  <MobileAlbumPage/>
-                </Route>
-                <Route path="/player">
-                  <MobilePlayerPage/>
-                </Route>
-                <Route path="/leftmenu">
-                </Route>
-                <Route path="/mobileplaybar">
-                  <MobilePlaybar/>
-                </Route>
-                <Route path="/*">
-                  <Redirect to="/" />
-                </Route>
-              </Switch>
+              <div>
+                <Switch>
+                  <Route exact path="/">
+                    <MobileHomePage/>
+                  </Route>
+                  <Route path="/artist">
+                    <MobileArtistPage/>
+                  </Route>
+                  <Route path="/album">
+                    <MobileAlbumPage/>
+                  </Route>
+                  <Route path="/player">
+                    <MobilePlayerPage/>
+                  </Route>
+                  <Route path="/leftmenu">
+                  </Route>
+                  <Route path="/mobileplaybar">
+                    <MobilePlaybar/>
+                  </Route>
+                  <Route path="/*">
+                    <Redirect to="/" />
+                  </Route>
+                </Switch>
+                <MobilePlaybar/>
+              </div>
             ) : (
               <div>
                 <DesktopLM/>
@@ -70,11 +73,14 @@ const Router = () => {
                   <Route exact path="/" >
                     <DesktopHomePage/>
                   </Route>
-                  <Route path="/artist">
+                  <Route path="/artist/:id">
                     <DesktopArtistPage/>
                   </Route>
+                  <Route path="/artist/">
+                    <DesktopArtistPageStatic/>
+                  </Route>
                   <Route path="/album/:id">
-                    <SpotifyAlbum/>
+                    <DesktopAlbumPage/>
                   </Route>
                   <Route path="/album">
                     <DesktopAlbumPageStatic/>
