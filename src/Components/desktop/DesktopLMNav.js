@@ -38,6 +38,9 @@ const DesktopLMNav = () => {
 				<div className={styles.CCOnly}>
 					<button className={clsx(styles.CCButon, styles.title2)}>CC ONLY</button>
 				</div>
+				<div className={styles.live}>
+					<button className={clsx(styles.liveButon, styles.title2)}>GO LIVE</button>
+				</div>
 			</div>
 	);
 }

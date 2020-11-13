@@ -27,7 +27,6 @@ import MobilePlayerPage from '@pages/mobile/MobilePlayerPage.js';
 
 //mobile components
 import MobilePlaybar from '@components/mobile/MobilePlaybar.js'
-import SpotifyAlbum from '@components/Spotify/spotifyAlbum.js';
 
 
 
@@ -40,28 +39,31 @@ const Router = () => {
         <Media queries={{ small: { maxWidth: 599 } }}>
           {matches =>
             matches.small ? (
-              <Switch>
-                <Route exact path="/">
-                  <MobileHomePage/>
-                </Route>
-                <Route path="/artist">
-                  <MobileArtistPage/>
-                </Route>
-                <Route path="/album">
-                  <MobileAlbumPage/>
-                </Route>
-                <Route path="/player">
-                  <MobilePlayerPage/>
-                </Route>
-                <Route path="/leftmenu">
-                </Route>
-                <Route path="/mobileplaybar">
-                  <MobilePlaybar/>
-                </Route>
-                <Route path="/*">
-                  <Redirect to="/" />
-                </Route>
-              </Switch>
+              <div>
+                <Switch>
+                  <Route exact path="/">
+                    <MobileHomePage/>
+                  </Route>
+                  <Route path="/artist">
+                    <MobileArtistPage/>
+                  </Route>
+                  <Route path="/album">
+                    <MobileAlbumPage/>
+                  </Route>
+                  <Route path="/player">
+                    <MobilePlayerPage/>
+                  </Route>
+                  <Route path="/leftmenu">
+                  </Route>
+                  <Route path="/mobileplaybar">
+                    <MobilePlaybar/>
+                  </Route>
+                  <Route path="/*">
+                    <Redirect to="/" />
+                  </Route>
+                </Switch>
+                <MobilePlaybar/>
+              </div>
             ) : (
               <div>
                 <DesktopLM/>
@@ -74,7 +76,7 @@ const Router = () => {
                     <DesktopArtistPage/>
                   </Route>
                   <Route path="/album/:id">
-                    <SpotifyAlbum/>
+                    <DesktopAlbumPage/>
                   </Route>
                   <Route path="/album">
                     <DesktopAlbumPageStatic/>
