@@ -9,19 +9,6 @@ import AlbumArtistPage from '@components/desktop/AlbumArtistPage.js';
 import LastReleaseArtistPage from '@components/desktop/LastReleaseArtistPage.js';
 import styles from '@pages/PagesStyle/DesktopArtistPage.module.scss';
 
-let topTrackArray = [
-	{title: 'U2', img: ''},
-	{title: 'U2', img: ''},
-	{title: 'U2', img: ''},
-	{title: 'U2', img: ''},
-	{title: 'U2', img: ''},
-	{title: 'U2', img: ''},
-	{title: 'U2', img: ''},
-	{title: 'U2', img: ''},
-	{title: 'U2', img: ''}
-]
-
-
 const DesktopArtistPage = (props) => {
 	const params = useParams();
 
