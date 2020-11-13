@@ -12,18 +12,18 @@ const MobilePlayerPage = (props) => {
         <div className={styles.playerPage}>
             <div className={styles.upPart}>
                 <div>
-                    blz
+                    
                 </div>
                 <div>
-                    bla
+                    
                 </div>
                 <div>
-                    behs
+                    
                 </div>
             </div>
             <div className={styles.midPart}>
                 <div>
-                    blz
+                    
                 </div>
                 <div className={styles.trackInfo} >
                     <div className={styles.title}> trackTitle </div>
@@ -31,27 +31,47 @@ const MobilePlayerPage = (props) => {
                     <img></img>
                 </div>
                 <div>
-                    behs
+                    
                 </div>
             </div>
             <div className={styles.downPart}>
                 <div className={styles.controler}>
-                    <div className={ clsx( styles.playBtn) }>
-						<MobileButton>Play</MobileButton>
-					</div>
-                    <div className={ clsx( styles.playBtn) }>
-						<MobileButton>Shuffle</MobileButton>
-					</div>
-                    <div className={ clsx( styles.playBtn) }>
-						<MobileButton>Repeat</MobileButton>
-					</div>
+                    <div className={styles.btnControlers}>
+                        <button className={styles.Btn}>
+                            like
+                        </button>
+                        <button className={styles.Btn}>
+                            shuffle
+                        </button>
+                        <button className={styles.Btn}>
+                            repeat
+                        </button>
+                    </div>
+                    
                     <div></div>
                 </div>
-                <div>
-                    ho
+                <div className={styles.player}>
+                    <div className={styles.buttons}>
+                        <button className={styles.playBtn}>
+                            <img src="/static/media/precedent.svg" alt="playbuton"></img>
+                        </button>
+                        <button className={styles.playBtn}>
+                            <img src="/static/media/play.9fa67a5e.svg" alt="playbuton"></img>
+                        </button>
+                        <button className={styles.playBtn}>
+                            <img src="/static/media/suivant.svg" alt="playbuton"></img>
+                        </button>
+                    </div>
+                    <div className={styles.progressBar}>
+                        <div className={styles.expiredBar}>
+
+                        </div>
+                    </div>
+
                 </div>
+
                 <div>
-                    da
+                    
                 </div>
 
             </div>
