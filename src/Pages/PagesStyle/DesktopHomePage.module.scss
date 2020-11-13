@@ -1,16 +1,16 @@
 .DesktopHomePage{
-    margin-left: $LM-width;
+    margin-left: calc(#{$LM-width} + #{$margin});
+    margin-bottom: calc(#{$PlayBar-width} + #{$margin});
+    margin-top: $margin;
     display: grid;
     background-color: #1C1C1C;
 
     .SuggestContainer{
-        padding-top: $margin;
-        padding-bottom: $margin;
-        margin-left: $margin;
+        padding-bottom: 20px ;
     }
 
     .SuggestList{
-        padding-top: 10px;
+        padding-top: 15px;
         color: $grey3;
         display: grid;
         grid-auto-flow: column;
@@ -20,7 +20,6 @@
             width: 14vw;
             height: 14vw;
             background-color: white;
-            margin-right: 40px;
         }
     }
 
