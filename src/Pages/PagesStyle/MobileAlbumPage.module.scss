@@ -1,6 +1,15 @@
 .albumPage {
 	display: grid;
 	grid-template-columns: $mobile-grid;
+	margin-top: 50px;
+	margin-bottom: 100px;
+
+	h2 {
+		margin-bottom: 15px;
+		margin-bottom: 22px;
+		font-size: 22px;
+
+	}
 
 	.content {
 		grid-column: 2;
@@ -11,8 +20,39 @@
 			height: auto;
 		}
 
+		.infoAndArtist {
+			height: $mobile-btn-width;
+			display: grid;
+			align-items: end;
+
+			h3 {
+				font-size: 20px;
+			}
+
+			.infoAlbum {
+				font-size: 15px;
+			}
+		}
+
+		.separateTracklist {
+			margin-top: 15px;
+		}
+
+
+		ul {
+			margin-top: 14px;
+			li {
+				div {
+					font-size: 14px;
+					padding-top: 8px;
+					padding-bottom: 8px;
+				}
+			}
+		}
+
 		.btn{
 			display: grid;
+			z-index: 3;
 			position: absolute;
 			right: -9vw;
 			bottom: -18vw;
