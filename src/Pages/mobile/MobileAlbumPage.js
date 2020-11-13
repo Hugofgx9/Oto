@@ -4,7 +4,6 @@ import clsx from 'clsx';
 import styles from '@pages/PagesStyle/MobileAlbumPage.module.scss';
 
 import MobileButton from '@components/mobile/MobileButton.js';
-import MobilePlaybar from '@components/mobile/MobilePlaybar.js';
 
 let albumTracklist = [
 	{title: 'firstTrack'},
@@ -40,7 +39,6 @@ const MobileAlbumPage = () => {
 					)}
 				</ul>
 			</div>
-			<MobilePlaybar/>
 		</div>
 	);
 }
