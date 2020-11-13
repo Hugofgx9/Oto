@@ -1,6 +1,6 @@
 .artistPage{
-	margin-left: 220px;
-	margin-bottom: 200px;
+	margin-left: $LM-width;
+	margin-bottom: calc(#{$PlayBar-width} + #{$margin});
 
 	.artistBannerWrap{
 		overflow: hidden;
