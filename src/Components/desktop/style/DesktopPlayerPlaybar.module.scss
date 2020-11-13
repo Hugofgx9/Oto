@@ -1,9 +1,9 @@
 .playbar{
-    align-self: center;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     grid-template-rows: 50px 1fr;
     align-items: center;
+    justify-items: center;
 
     .boucle{
         grid-column: 1;
@@ -24,5 +24,40 @@
     .aleatoire{
         grid-column: 5;
         grid-row: 1;
+    }
+
+    .slidecontainer{
+        grid-column: 1/6;
+        grid-row: 2;
+        width: 100%;
+
+        .slider{
+            -webkit-appearance: none;  /* Override default CSS styles */
+            appearance: none;
+            width: 100%; /* Full-width */
+            height: 4px; /* Specified height */
+            background: $grey3; /* Grey background */
+            outline: none; /* Remove outline */
+        }
+        /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none; /* Override default look */
+            appearance: none;
+            width: 15px; /* Set a specific slider handle width */
+            height: 8px; /* Slider handle height */
+            background: $blue; /* Green background */
+            cursor: pointer; /* Cursor on hover */
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 15px; /* Set a specific slider handle width */
+            height: 8px; /* Slider handle height */
+            background: $blue; /* Green background */
+            cursor: pointer; /* Cursor on hover */
+        }
+        /* Mouse-over effects */
+        .slider:hover {
+            background: $white; /* Grey background */
+        }
     }
 }

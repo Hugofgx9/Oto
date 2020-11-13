@@ -20,6 +20,9 @@ const DesktopPlayerPlaybar = () => {
             {/* <img src={pause} alt="pause" /> */}
             <img src={precedent} alt="precedent" className={ styles.precedent}/>
             <img src={aleatoire} alt="aleatoire" className={ styles.aleatoire}/>
+            <div className={ styles.slidecontainer }>
+                <input type="range" min="1" max="100" className={ styles.slider }/>
+            </div>
         </div>
     );
 }
