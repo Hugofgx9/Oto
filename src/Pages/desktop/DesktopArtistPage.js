@@ -32,48 +32,25 @@ const DesktopArtistPage = (props) => {
 		albums: [],
 	});
 
+	const [albums, setAlbums] = useState({});
+
 	useEffect(() => {
-		//let artistID ="";
-		let albums = {};
-		let paramsID = params.id;
-		//let lastRelease = {};
-		let obj = {};
-			const searchArtist = async () => {
-				const result = await spotifyApi.searchArtists(paramsID, {limit: 1})
-				obj.name = result.artists.items[0].name;
-				obj.id = result.artists.items[0].id;
-				obj.img = result.artists.items[0].images[0].url;
-
-				searchAlbums(result.artists.items[0].id);
-				//lastRelease();
-			};
-			const searchAlbums = async (artistID) => {
-				const result = await spotifyApi.getArtistAlbums(artistID, {limit: 6});
-				albums = [];
-				result.items.forEach((item, index) => {
-					albums[index] = {};
-					loadAlbum(item.id, index)
-				});
-				obj.albums = albums;
-				setArtist(obj);
-				console.log(obj.albums[0].name);
-			};
-			// const searchLastRelease = async () => {
-			// 	const result = await spotifyApi.getArtistAlbums(artistID, {limit: 1});
-			// 	//result.name;
-
-			// 	//result.items[0]
-			// };
-			const loadAlbum = async (id, arrayIndex) => {
-				const result2 = await spotifyApi.getAlbum(id)
-				albums[arrayIndex].id = result2.id;
-				albums[arrayIndex].name = result2.name;
-				albums[arrayIndex].img = result2.images[1].url;
-			}
-			searchArtist();
+		const searchArtists = async (artistQuery) => {
+			const results = await spotifyApi.searchArtists(artistQuery, {limit: 1});
+			return results.artists.items;
+		};
+		const searchArtistAlbums = async (artistID) => {
+			const result = await spotifyApi.getArtistAlbums(artistID, {limit: 6});
+			console.log(result.items);
+			return result.items;
+		}
+		const getSpotifyData = async () => {
+			const artists = await searchArtists(params.id)
+			const albums = await searchArtistAlbums(artists[0].id)
+			setAlbums(albums);
+		}
+		getSpotifyData();
 	}, [spotifyApi, params])
-
-
 
 	return (
 		<div className={styles.artistPage}>
