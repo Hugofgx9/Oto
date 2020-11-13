@@ -76,7 +76,7 @@ const Router = () => {
                   <Route path="/artist/:id">
                     <DesktopArtistPage/>
                   </Route>
-                  <Route path="/artist/">
+                  <Route path="/artist">
                     <DesktopArtistPageStatic/>
                   </Route>
                   <Route path="/album/:id">
