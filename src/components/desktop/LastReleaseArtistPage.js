@@ -3,7 +3,8 @@ import styles from '@components/desktop/style/LastReleaseArtistPage.module.scss'
 import clsx from 'clsx'
 
 const LastReleaseArtistPage = (props) => {
-	//const { color } = props;
+	const { artist, name, img } = props;
+
 	return (
 			<div className = {styles.LastReleaseArtistPage} >
 
@@ -12,19 +13,16 @@ const LastReleaseArtistPage = (props) => {
 					</h2>
 
 					<img className = {styles.CoverLastRelease} 
-					src="https://m.media-amazon.com/images/I/91XmfqM1yBL._SS500_.jpg" alt=""/>
+					src={img} alt=""/>
 					
 					<span className = {clsx(styles.corpsTitle, styles.TitleLastRelease)}>
-					
-						hand crushed by a mallet (Remix) 
-						[feat. Fall Out Boy, Craig Owens, 
-						Nicole Dollanganger]
+						{name}
 					</span>
 					<div className = {styles.ArtistLastRelease}>
-						100 gecs - Fall Out Boy - Craig Owens
+						{artist}
 					</div>					
 					<div className = {clsx(styles.corps, styles.DateLengthLastRelease)}>
-						2020 - 1 titre, 2 min 55 s
+						date - nombre de titres, durée
 					</div>					
 						
 			</div>

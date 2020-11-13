@@ -25,8 +25,9 @@ let topTrackArray = [
 const DesktopArtistPage = (props) => {
 	const params = useParams();
 
-	const [albums, setAlbums] = useState({});
+	const [albums, setAlbums] = useState();
 	const [artist, setArtist] = useState();
+	const [topTracks, setTopTracks] = useState();
 
 	const { spotifyApi } = useContext(SpotifyContext);
 
@@ -35,14 +36,20 @@ const DesktopArtistPage = (props) => {
 			const results = await spotifyApi.searchArtists(artistQuery, {limit: 1});
 			return results.artists.items;
 		};
-
+		const getArtistTopTracks = async (artistID) => {
+			const result = await spotifyApi.getArtistTopTracks(artistID, 'FR');
+			return result.tracks;
+		};		
 		const searchArtistAlbums = async (artistID) => {
 			const result = await spotifyApi.getArtistAlbums(artistID, {limit: 6});
 			return result.items;
 		};
 		const getSpotifyData = async () => {
-			const artists = await searchArtists(params.id)
-			const albums = await searchArtistAlbums(artists[0].id)
+			const artists = await searchArtists(params.id);
+			const albums = await searchArtistAlbums(artists[0].id);
+			const topTracks = await getArtistTopTracks(artists[0].id);
+			console.log(topTracks);
+			setTopTracks(topTracks);
 			setAlbums(albums);
 			setArtist(artists[0]);
 		};
@@ -63,7 +70,7 @@ const DesktopArtistPage = (props) => {
 						<div className = {styles.releaseAndTrackSection} >
 							<div className = {styles.lastRelease} >
 								<div className = {clsx(styles.corps, styles.albumArtistPage)}>
-									<LastReleaseArtistPage/>
+									<LastReleaseArtistPage name={albums[0].name} artist={artist.name} img={albums[0].images[0].url}/>
 								</div>
 							</div>
 								
@@ -72,10 +79,10 @@ const DesktopArtistPage = (props) => {
 									Top titres
 								</h2>
 								<ul className = {styles.listeTopTitres}>
-									{ topTrackArray.map((track, index) => {
+									{ topTracks.slice(0,9).map((track, index) => {
 											return (
-												<li key={index} className= {styles.greyLight}>
-													<TopTitleArtistPage title={track.title} img={track.img}/>
+												<li key={track.id} className= {styles.greyLight}>
+													<TopTitleArtistPage title={track.name.slice(0,18) + '...'} img={track.album.images[2].url}/>
 												</li>
 											)
 										})
