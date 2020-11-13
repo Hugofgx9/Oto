@@ -1,7 +1,7 @@
 .gridLMNav {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 80px 120px auto auto;
+    grid-template-rows: 80px 120px auto auto auto;
     
     // DISPLACEMENT
 
@@ -30,6 +30,20 @@
       grid-row: 4;
 
       .CCButon{
+        border: 2px;
+        border-color: $grey3;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-block;
+      }
+    }
+
+    .live{
+      grid-column: 1;
+      grid-row: 5;
+
+      .liveButon{
         border: 2px;
         border-color: $grey3;
         padding: 14px 28px;

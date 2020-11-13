@@ -15,10 +15,10 @@ const DesktopPlayerPlaybar = () => {
 	return (
         <div className={ styles.playbar}>
             <img src={boucle} alt="boucle" className={ styles.boucle}/>
-            <img src={suivant} alt="suivant" className={ styles.suivant}/>
+            <img src={precedent} alt="precedent" className={ styles.precedent}/>
             <img src={playbuton} alt="playbuton" className={ styles.playbuton}/>
             {/* <img src={pause} alt="pause" /> */}
-            <img src={precedent} alt="precedent" className={ styles.precedent}/>
+            <img src={suivant} alt="suivant" className={ styles.suivant}/>
             <img src={aleatoire} alt="aleatoire" className={ styles.aleatoire}/>
             <div className={ styles.slidecontainer }>
                 <input type="range" min="1" max="100" className={ styles.slider }/>
