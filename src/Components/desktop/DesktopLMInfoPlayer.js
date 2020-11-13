@@ -3,7 +3,7 @@ import React from 'react';
 //import { Link } from 'react-router-dom';
 
 //STYLE
-import styles from './ComponentStyle/DesktopLMInfoPlayer.module.scss';
+import styles from '@components/desktop/style/DesktopLMInfoPlayer.module.scss';
 
 const DesktopLMInfoPlayer = () => {
 	return (

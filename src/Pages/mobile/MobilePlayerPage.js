@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 
 import styles from '@pages/PagesStyle/MobilePlayerPage.module.scss';
-import MobileButton from '@components/MobileButton.js';
+import MobileButton from '@components/mobile/MobileButton.js';
 
 
 

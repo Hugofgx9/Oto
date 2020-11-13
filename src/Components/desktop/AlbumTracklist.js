@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 //import PropTypes from 'prop-types';
-import styles from './ComponentStyle/AlbumPageSingleTitle.module.scss';
+import styles from '@components/desktop/style/AlbumTracklist.module.scss';
 
 const AlbumTracklist = (props) => {
 	const { nb, title, artist, duration, gridClass } = props;

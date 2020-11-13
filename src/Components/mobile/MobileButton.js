@@ -1,7 +1,7 @@
 import React from 'react';
 //import clsx from 'clsx';
 //import { Link } from 'react-router-dom';
-import styles from '@components/ComponentStyle/MobileButton.module.scss';
+import styles from '@components/mobile/style/MobileButton.module.scss';
 
 
 const MobileButton = (props) => {

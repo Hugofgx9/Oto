@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 //import { Link } from 'react-router-dom';
 import styles from '@pages/PagesStyle/MobileHomePage.module.scss';
-import MobileThinLine from '@components/MobileThinLine.js';
+import MobileThinLine from '@components/mobile/MobileThinLine.js';
 
 
 let categories = [

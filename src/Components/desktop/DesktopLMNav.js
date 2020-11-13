@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 
 //STYLE
-import styles from './ComponentStyle/DesktopLMNav.module.scss';
+import styles from '@components/desktop/style/DesktopLMNav.module.scss';
 
 const DesktopLMNav = () => {
 	return (
@@ -37,6 +37,9 @@ const DesktopLMNav = () => {
 				</ul>
 				<div className={styles.CCOnly}>
 					<button className={clsx(styles.CCButon, styles.title2)}>CC ONLY</button>
+				</div>
+				<div className={styles.live}>
+					<button className={clsx(styles.liveButon, styles.title2)}>GO LIVE</button>
 				</div>
 			</div>
 	);
