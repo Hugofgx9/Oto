@@ -12,7 +12,7 @@ import Media from 'react-media';
 
 //desktop pages
 import DesktopArtistPage from '@pages/desktop/DesktopArtistPage.js';
-//import DesktopAlbumPage from '@pages/desktop/DesktopAlbumPage.js';
+import DesktopAlbumPage from '@pages/desktop/DesktopAlbumPage.js';
 import DesktopAlbumPageStatic from '@pages/desktop/DesktopAlbumPageStatic.js';
 import DesktopHomePage from '@pages/desktop/DesktopHomePage.js';
 import DesktopLM from '@components/desktop/DesktopLM.js';
@@ -76,9 +76,9 @@ const Router = () => {
                   <Route path="/album/:id">
                     <SpotifyAlbum/>
                   </Route>
-{/*                  <Route path="/album">
+                  <Route path="/album">
                     <DesktopAlbumPageStatic/>
-                  </Route>*/}
+                  </Route>
                   {/* <Route path="/leftmenu">
                     <DesktopLM/>
                   </Route> */}
