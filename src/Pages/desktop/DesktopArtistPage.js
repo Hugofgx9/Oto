@@ -1,7 +1,6 @@
 import { useParams } from 'react-router-dom';
 import React, { useContext, useState, useEffect } from 'react';
 import { SpotifyContext } from '@components/SpotifyProvider';
-import { searchArtists, searchArtistAlbums} from '@src/query/query.js';
 //import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
@@ -25,6 +24,7 @@ let topTrackArray = [
 
 const DesktopArtistPage = (props) => {
 	const params = useParams();
+
 	const [albums, setAlbums] = useState({});
 	const [artist, setArtist] = useState();
 
@@ -58,7 +58,6 @@ const DesktopArtistPage = (props) => {
 					<div className ={styles.artistBannerWrap} >
 						<img src={artist.images[0].url} alt=""/>
 					</div>
-
 					<div className = {styles.artistPageContent}>
 						<h2 className = {clsx(styles.artistName, styles.title, styles.greyLight)}> {artist.name} </h2>
 						<div className = {styles.releaseAndTrackSection} >
