@@ -57,7 +57,7 @@ const DesktopAlbumPage = (props) => {
       });
     }
     searchArtist();
-  }, [spotifyApi])
+  }, [spotifyApi, params])
 
 	return (
 			<div className={ styles.albumPageContainer }>

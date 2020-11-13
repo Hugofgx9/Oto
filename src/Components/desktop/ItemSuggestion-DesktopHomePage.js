@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const DesktopHomePage = (props) => {
+const ItemSuggestion = (props) => {
 	const { ImageSrc, ItemTitle } = props;
 	return (
 			<div>
@@ -16,4 +16,4 @@ const DesktopHomePage = (props) => {
 	);
 }
 
-export default DesktopHomePage;
+export default ItemSuggestion;
