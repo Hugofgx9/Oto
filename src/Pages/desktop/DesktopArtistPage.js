@@ -21,17 +21,6 @@ let topTrackArray = [
 	{title: 'U2', img: ''}
 ]
 
-let allAlbumsArray= [
-	{title: 'U2', img: ''},
-	{title: 'U2', img: ''},
-	{title: 'U2', img: ''},
-	{title: 'U2', img: ''},
-	{title: 'U2', img: ''},
-	{title: 'U2', img: ''},
-	{title: 'U2', img: ''},
-	{title: 'U2', img: ''},
-	{title: 'U2', img: ''}
-]
 
 const DesktopArtistPage = (props) => {
 	const params = useParams();
@@ -44,12 +33,13 @@ const DesktopArtistPage = (props) => {
 	});
 
 	useEffect(() => {
-		let artistID ="";
+		//let artistID ="";
 		let albums = {};
-		let lastRelease = {};
+		let paramsID = params.id;
+		//let lastRelease = {};
 		let obj = {};
 			const searchArtist = async () => {
-				const result = await spotifyApi.searchArtists(params.id, {limit: 1})
+				const result = await spotifyApi.searchArtists(paramsID, {limit: 1})
 				obj.name = result.artists.items[0].name;
 				obj.id = result.artists.items[0].id;
 				obj.img = result.artists.items[0].images[0].url;
@@ -68,12 +58,12 @@ const DesktopArtistPage = (props) => {
 				setArtist(obj);
 				console.log(obj.albums[0].name);
 			};
-			const searchLastRelease = async () => {
-				const result = await spotifyApi.getArtistAlbums(artistID, {limit: 1});
-				//result.name;
+			// const searchLastRelease = async () => {
+			// 	const result = await spotifyApi.getArtistAlbums(artistID, {limit: 1});
+			// 	//result.name;
 
-				//result.items[0]
-			};
+			// 	//result.items[0]
+			// };
 			const loadAlbum = async (id, arrayIndex) => {
 				const result2 = await spotifyApi.getAlbum(id)
 				albums[arrayIndex].id = result2.id;
@@ -81,7 +71,7 @@ const DesktopArtistPage = (props) => {
 				albums[arrayIndex].img = result2.images[1].url;
 			}
 			searchArtist();
-	}, [spotifyApi])
+	}, [spotifyApi, params])
 
 
 
@@ -123,9 +113,9 @@ const DesktopArtistPage = (props) => {
 					</h2>
 					<div className={ styles.albumsListWrap }>
 						<ul className = {styles.albumsList}>
-							{ artist.albums.map((album) => {
+							{ artist.albums.map((album, index) => {
 									return(
-										<li key={album.id}>
+										<li key={index}>
 											<AlbumArtistPage name={album.name} year="" img={album.img}/>
 										</li>
 									)

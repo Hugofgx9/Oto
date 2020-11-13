@@ -12,6 +12,7 @@ import Media from 'react-media';
 
 //desktop pages
 import DesktopArtistPage from '@pages/desktop/DesktopArtistPage.js';
+import DesktopArtistPageStatic from '@pages/desktop/DesktopArtistPageStatic.js';
 import DesktopAlbumPage from '@pages/desktop/DesktopAlbumPage.js';
 import DesktopAlbumPageStatic from '@pages/desktop/DesktopAlbumPageStatic.js';
 import DesktopHomePage from '@pages/desktop/DesktopHomePage.js';
@@ -74,6 +75,9 @@ const Router = () => {
                   </Route>
                   <Route path="/artist/:id">
                     <DesktopArtistPage/>
+                  </Route>
+                  <Route path="/artist/">
+                    <DesktopArtistPageStatic/>
                   </Route>
                   <Route path="/album/:id">
                     <DesktopAlbumPage/>
