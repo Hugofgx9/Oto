@@ -19,7 +19,7 @@ const SpotifyProvider = ({ clientId, redirectUri, children }) => {
     player,
     spotifyApi,
     isReady
-  }), [token, deviceId, player])
+  }), [token, deviceId, player, isReady])
 
   useEffect(() => {
     if (token) {
