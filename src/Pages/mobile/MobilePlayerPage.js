@@ -4,6 +4,12 @@ import clsx from 'clsx';
 import styles from '@pages/PagesStyle/MobilePlayerPage.module.scss';
 import MobileButton from '@components/mobile/MobileButton.js';
 
+import playbuton from '@src/assets/img/play.svg';
+import pause from '@src/assets/img/pause.svg';
+import suivant from '@src/assets/img/suivant.svg';
+import precedent from '@src/assets/img/precedent.svg';
+import boucle from '@src/assets/img/boucle.svg';
+import aleatoire from '@src/assets/img/aleatoire.svg';
 
 
 const MobilePlayerPage = (props) => {
@@ -38,13 +44,13 @@ const MobilePlayerPage = (props) => {
                 <div className={styles.controler}>
                     <div className={styles.btnControlers}>
                         <button className={styles.Btn}>
-                            like
+                            <img src={precedent} alt="playbuton"></img>
                         </button>
                         <button className={styles.Btn}>
-                            shuffle
+                            <img src={aleatoire} alt="playbuton"></img>
                         </button>
                         <button className={styles.Btn}>
-                            repeat
+                            <img src={boucle} alt="playbuton"></img>
                         </button>
                     </div>
                     
@@ -53,20 +59,20 @@ const MobilePlayerPage = (props) => {
                 <div className={styles.player}>
                     <div className={styles.buttons}>
                         <button className={styles.playBtn}>
-                            <img src="/static/media/precedent.svg" alt="playbuton"></img>
+                            <img src={precedent} alt="playbuton"></img>
                         </button>
                         <button className={styles.playBtn}>
-                            <img src="/static/media/play.9fa67a5e.svg" alt="playbuton"></img>
+                            <img src={playbuton} alt="playbuton"></img>
                         </button>
                         <button className={styles.playBtn}>
-                            <img src="/static/media/suivant.svg" alt="playbuton"></img>
+                            <img src={suivant} alt="playbuton"></img>
                         </button>
                     </div>
-                    <div className={styles.progressBar}>
-                        <div className={styles.expiredBar}>
-
-                        </div>
-                    </div>
+                    <div className={ styles.slidecontainer }>
+                        <input type="range" min="1" max="100" className={ styles.slider }/>
+                     </div>
+                    
+                    
 
                 </div>
 
