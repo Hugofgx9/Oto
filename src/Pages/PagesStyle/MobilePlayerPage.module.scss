@@ -35,12 +35,40 @@
         display: grid;
         grid-template-columns: $mobile-grid;
         .controler{
-            color: $blue ;
-            div{
-                color: $greyLight;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            .btnControlers{
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                div{
+                    color: $greyLight;
+                }
+                .Btn{
+                    color: $blue;
+                }
+            
             }
-        
-            background-color: $grey1;
+        background-color: $grey1;  
         }
+        .player{
+            display: grid;
+            grid-template-rows: 2fr 1fr;
+            .buttons{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .progressBar{
+                background-color: $greyLight;
+                height: 2px;
+            }
+            .expiredBar{
+                background-color: $blue;
+                height: 2px;
+                width: 80%;
+            }
+        }
+        
+        
     }
+    
 }
