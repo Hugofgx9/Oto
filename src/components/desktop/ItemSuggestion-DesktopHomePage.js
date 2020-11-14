@@ -2,15 +2,15 @@ import React from 'react';
 
 
 const ItemSuggestion = (props) => {
-	const { ImageSrc, ItemTitle } = props;
+	const { image, title } = props;
 	return (
 			<div>
 				<div>
 				
-					<img src={ImageSrc} alt="" ></img>
+					<img src={image} alt="" ></img>
 				</div>
 				<span>
-					{ItemTitle}
+					{title}
 				</span>
 			</div>
 	);

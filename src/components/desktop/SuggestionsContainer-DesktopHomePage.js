@@ -3,46 +3,19 @@ import ItemSuggestion from './ItemSuggestion-DesktopHomePage'
 
 import styles from '@pages/PagesStyle/DesktopHomePage.module.scss'
 
-let GenreSuggest = [
-	{ItemTitle: 'Rock'},
-	{ItemTitle: 'Classique'},
-	{ItemTitle: 'Electro'},
-	{ItemTitle: 'Variété'},
-]
-
-let AmbianceSuggest = [
-	{ItemTitle: 'Relax'},
-	{ItemTitle: 'Motivation'},
-	{ItemTitle: 'Party'},
-	{ItemTitle: 'Work'},
-]
-
-let TopSuggest = [
-	{ItemTitle: 'TopFr'},
-	{ItemTitle: 'Motivation'},
-	{ItemTitle: 'Party'},
-	{ItemTitle: 'Work'},
-]
-
-let GlobalSuggest = {
-	Genre: GenreSuggest,
-	Ambiance: AmbianceSuggest,
-	Classement: TopSuggest,
-}
-
-
 const SuggestionContainer = (props) => {
 	const { SuggestType } = props;
+	console.log(SuggestType);
 	return (
 			<div className={styles.SuggestContainer} >
 
-				<span className={styles.TitleContainer} > {SuggestType} </span>
+				<span className={styles.TitleContainer} > Genre </span>
 
 				<ul className={styles.SuggestList}>
-					{GlobalSuggest[SuggestType].map((Items, index) =>{
+					{SuggestType.map((item, index) =>{
 						return (
-							<li key={index} >
-								<ItemSuggestion ItemTitle={Items.ItemTitle} />
+							<li key={item.id} >
+								<ItemSuggestion title={item.name} image={item.icons[0].url} />
 							</li>
 						)
 					})}
