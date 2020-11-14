@@ -5,7 +5,6 @@ import styles from '@pages/PagesStyle/DesktopHomePage.module.scss'
 
 const SuggestionContainer = (props) => {
 	const { SuggestType } = props;
-	console.log(SuggestType);
 	return (
 			<div className={styles.SuggestContainer} >
 
