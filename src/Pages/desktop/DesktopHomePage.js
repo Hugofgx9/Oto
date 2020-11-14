@@ -4,51 +4,35 @@ import { SpotifyContext } from '@components/SpotifyProvider';
 import SuggestionsContainer from '@components/desktop/SuggestionsContainer-DesktopHomePage.js'
 import styles from '@pages/PagesStyle/DesktopHomePage.module.scss'
 
-
 const DesktopHomePage = () => {
 	
-	//const [albums, setAlbums] = useState();
-
 	const [categories, setCategories] = useState();
-	
 	const { spotifyApi } = useContext(SpotifyContext);
 	
 	useEffect(() => {
-		const getRecommandations = async () => {
-			const results = await spotifyApi.getCategories({country: 'FR', locale: 'fr_FR'});
-			console.log(results.categories.items)
+		const getCategories = async (limit) => {
+			const results = await spotifyApi.getCategories({country: 'FR', locale: 'fr_FR', limit: limit});
 			return results.categories.items;
 		};
 		const getSpotifyData = async () => {
-			const recommandations = await getRecommandations();
-			setCategories(recommandations);
+			const categoriesResult = await getCategories(20);
+			setCategories(categoriesResult);
 		};
 		getSpotifyData();
 	}, [spotifyApi])
 
-
-
 	return ( 
-		
-		<div className={styles.DesktopHomePage} >
+				<div className={styles.DesktopHomePage} >
 			{categories &&
 				<ul>
-
-							<li>
-								<SuggestionsContainer SuggestType={categories.slice(0,4)} />
-							</li>
-							<li>
-								<SuggestionsContainer SuggestType={categories.slice(4,8)} />
-							</li>
-							<li>
-								<SuggestionsContainer SuggestType={categories.slice(8,12)} />
-							</li>
-							<li>
-								<SuggestionsContainer SuggestType={categories.slice(12,16)} />
-							</li>
-                	
+						{categories.map((category) => {
+							return (
+								<li>
+									<SuggestionsContainer category={category} />
+								</li>
+							)
+						})}            	
 				</ul>
-
 			}
 		</div>
 	);

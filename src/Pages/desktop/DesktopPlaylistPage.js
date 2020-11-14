@@ -23,18 +23,12 @@ const DesktopPlaylistPage = (props) => {
   const [playlist, setplaylist] = useState();
 
   useEffect(() => {
-		const getFirstPlaylistOfCategorie = async (categoryID) => {
-			const result = await spotifyApi.getCategoryPlaylists(categoryID,{country: 'FR', locale: 'fr_FR', limit: 1});
-			return result.playlists.items[0].id;
-		}
 		const getPlaylist = async (playlistID) => {
 			const results = await spotifyApi.getPlaylist(playlistID);
 			return results;
 		}
 		const getSpotifyData = async () => {
-			const firstPlaylistID = await getFirstPlaylistOfCategorie("toplists");
-			const playlist = await getPlaylist(firstPlaylistID);
-			console.log(playlist);
+			const playlist = await getPlaylist(params.id);
 			setplaylist(playlist);
 		}
     getSpotifyData();

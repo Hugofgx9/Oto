@@ -1,10 +1,10 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 const ItemSuggestion = (props) => {
-	const { image, title } = props;
+	const { image, title, id} = props;
 	return (
-			<div>
+			<Link to={`/playlist/${id}`}>
 				<div>
 				
 					<img src={image} alt="" ></img>
@@ -12,7 +12,7 @@ const ItemSuggestion = (props) => {
 				<span>
 					{title}
 				</span>
-			</div>
+			</Link>
 	);
 }
 
