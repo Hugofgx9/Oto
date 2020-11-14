@@ -34,6 +34,7 @@ const DesktopPlaylistPage = (props) => {
     getSpotifyData();
   }, [spotifyApi, params])
 
+
 	return (
 			<div>
 				{ playlist && 
@@ -66,15 +67,12 @@ const DesktopPlaylistPage = (props) => {
 							{playlist.tracks.items.map((track, index) => {
 								track = track.track;
 								return (
-									<li key={index}>
+									<li key={track.id}>
 										<AlbumTracklist 
 											nb={index} 
+											uri={track.uri}
 											title={track.name} 
-											artist={track.artists.map((artist, index) => {
-												return (
-													artist.name
-												)
-											})}
+											artists={track.artists}
 											duration={msToHMS(track.duration_ms)} 
 											gridClass={ styles.gridTrackList }
 										/>

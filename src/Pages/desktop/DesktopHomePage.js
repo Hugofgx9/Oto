@@ -27,7 +27,7 @@ const DesktopHomePage = () => {
 				<ul>
 						{categories.map((category) => {
 							return (
-								<li>
+								<li key={category.id}>
 									<SuggestionsContainer category={category} />
 								</li>
 							)
