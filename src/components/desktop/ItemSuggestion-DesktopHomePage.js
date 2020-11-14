@@ -1,18 +1,18 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 const ItemSuggestion = (props) => {
-	const { ImageSrc, ItemTitle } = props;
+	const { image, title, id} = props;
 	return (
-			<div>
+			<Link to={`/playlist/${id}`}>
 				<div>
 				
-					<img src={ImageSrc} alt="" ></img>
+					<img src={image} alt="" ></img>
 				</div>
 				<span>
-					{ItemTitle}
+					{title}
 				</span>
-			</div>
+			</Link>
 	);
 }
 

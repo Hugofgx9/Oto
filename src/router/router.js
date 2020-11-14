@@ -15,6 +15,7 @@ import DesktopArtistPage from '@pages/desktop/DesktopArtistPage.js';
 import DesktopArtistPageStatic from '@pages/desktop/DesktopArtistPageStatic.js';
 import DesktopAlbumPage from '@pages/desktop/DesktopAlbumPage.js';
 import DesktopAlbumPageStatic from '@pages/desktop/DesktopAlbumPageStatic.js';
+import DesktopPlaylistPage from '@pages/desktop/DesktopPlaylistPage.js';
 import DesktopHomePage from '@pages/desktop/DesktopHomePage.js';
 import DesktopLM from '@components/desktop/DesktopLM.js';
 import DesktopPlayer from '@components/desktop/DesktopPlayer.js';
@@ -84,6 +85,9 @@ const Router = () => {
                   </Route>
                   <Route path="/album">
                     <DesktopAlbumPageStatic/>
+                  </Route>
+                  <Route path="/playlist/:id">
+                    <DesktopPlaylistPage/>
                   </Route>
                   {/* <Route path="/leftmenu">
                     <DesktopLM/>

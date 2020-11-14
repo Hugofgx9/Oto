@@ -1,53 +1,43 @@
-import React from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import ItemSuggestion from './ItemSuggestion-DesktopHomePage'
-
+import { SpotifyContext } from '@components/SpotifyProvider';
 import styles from '@pages/PagesStyle/DesktopHomePage.module.scss'
 
-let GenreSuggest = [
-	{ItemTitle: 'Rock'},
-	{ItemTitle: 'Classique'},
-	{ItemTitle: 'Electro'},
-	{ItemTitle: 'Variété'},
-]
-
-let AmbianceSuggest = [
-	{ItemTitle: 'Relax'},
-	{ItemTitle: 'Motivation'},
-	{ItemTitle: 'Party'},
-	{ItemTitle: 'Work'},
-]
-
-let TopSuggest = [
-	{ItemTitle: 'TopFr'},
-	{ItemTitle: 'Motivation'},
-	{ItemTitle: 'Party'},
-	{ItemTitle: 'Work'},
-]
-
-let GlobalSuggest = {
-	Genre: GenreSuggest,
-	Ambiance: AmbianceSuggest,
-	Classement: TopSuggest,
-}
-
-
 const SuggestionContainer = (props) => {
-	const { SuggestType } = props;
+	const { category } = props;
+
+	const { spotifyApi } = useContext(SpotifyContext);
+	const [playlists, setPlaylists] = useState();
+
+	useEffect(() => {
+		const getPlaylistOfCategorie = async (categoryID, limit) => {
+			const result = await spotifyApi.getCategoryPlaylists(categoryID, { country: 'FR', locale: 'fr_FR', limit: limit });
+			return result.playlists.items;
+		}
+		const getSpotifyData = async () => {
+			const playlists = await getPlaylistOfCategorie( category.id , 4);
+			setPlaylists(playlists);
+		}
+		getSpotifyData();
+	}, [spotifyApi, category])
+
+
 	return (
 			<div className={styles.SuggestContainer} >
 
-				<span className={styles.TitleContainer} > {SuggestType} </span>
+				<span className={styles.TitleContainer} > {category.name} </span>
 
-				<ul className={styles.SuggestList}>
-					{GlobalSuggest[SuggestType].map((Items, index) =>{
-						return (
-							<li key={index} >
-								<ItemSuggestion ItemTitle={Items.ItemTitle} />
-							</li>
-						)
-					})}
-				</ul>
-				
+				{playlists &&				
+					<ul className={styles.SuggestList}>
+						{playlists.map((playlist) =>{
+							return (
+								<li key={playlist.id} >
+									<ItemSuggestion id={playlist.id} title={playlist.name} image={playlist.images[0].url} />
+								</li>
+							)
+						})}
+					</ul>
+				}
 			</div>
 	);
 }
