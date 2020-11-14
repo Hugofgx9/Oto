@@ -20,7 +20,7 @@ const DesktopLMNav = () => {
 								<Link to="/album">albums</Link>
 							</li>
 							<li>
-								<Link to="/artist">artistes</Link>
+								<Link to="/artist/daft">artistes</Link>
 							</li>
 							<div className={ styles.rectangle }></div>
 						</ul>
