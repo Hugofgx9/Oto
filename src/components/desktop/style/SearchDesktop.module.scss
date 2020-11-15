@@ -1,0 +1,29 @@
+.searchDesktop {
+	position: absolute;
+	left: $LM-width;
+	top: 0;
+
+	.bar {
+		.barContent {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		button {
+			margin-right: 10px;
+		}
+		input {
+			display: none;
+		}
+	}
+
+	.result {
+		height: 0px;
+		//height: 100px;
+		width: 100%;
+		background-color: red;
+		display:none;
+	}
+
+
+}

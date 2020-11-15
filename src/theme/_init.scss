@@ -28,6 +28,16 @@ button:focus {
   outline: 0;
 }
 
+input[type=text]{
+  border: none;
+  background-color: transparent;
+
+  &:focus {
+    outline: 0;
+  }
+
+}
+
 .title{
   font-family: 'MonumentExtended Black';
   color: $blue;

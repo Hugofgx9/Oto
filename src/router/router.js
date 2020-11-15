@@ -19,6 +19,7 @@ import DesktopPlaylistPage from '@pages/desktop/DesktopPlaylistPage.js';
 import DesktopHomePage from '@pages/desktop/DesktopHomePage.js';
 import DesktopLM from '@components/desktop/DesktopLM.js';
 import DesktopPlayer from '@components/desktop/DesktopPlayer.js';
+import SearchDesktop from '@components/desktop/SearchDesktop';
 
 //mobile pages
 import MobileArtistPage from '@pages/mobile/MobileArtistPage.js';
@@ -70,6 +71,7 @@ const Router = () => {
               <div>
                 <DesktopLM/>
                 <DesktopPlayer/>
+                <SearchDesktop/>
                 <Switch>
                   <Route exact path="/" >
                     <DesktopHomePage/>
