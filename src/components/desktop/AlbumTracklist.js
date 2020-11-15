@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import { SpotifyContext } from '@components/SpotifyProvider';
+import { PlayerContext } from '@src/context/PlayerContext';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 //import PropTypes from 'prop-types';
@@ -9,6 +10,8 @@ const AlbumTracklist = (props) => {
 	const { uri, nb, title, artists, duration, gridClass } = props;
 
 	const { spotifyApi, deviceId } = useContext(SpotifyContext);
+	const {setIsPlay} = useContext(PlayerContext);
+
 
   const playSound = (uri) => {
     const data = {
@@ -16,9 +19,7 @@ const AlbumTracklist = (props) => {
       "uris": [ uri ]
     }
     spotifyApi.play(data)
-      .then(function() {
-        console.log('play')
-      })
+      .then(setIsPlay(true))
   }
 
 	return (

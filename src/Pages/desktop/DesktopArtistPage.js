@@ -17,7 +17,7 @@ const DesktopArtistPage = (props) => {
 	const [topTracks, setTopTracks] = useState();
 
 	const { spotifyApi } = useContext(SpotifyContext);
-
+	
 	useEffect(() => {
 		// const searchArtists = async (artistQuery) => {
 		// 	const results = await spotifyApi.searchArtists(artistQuery, {limit: 1});
