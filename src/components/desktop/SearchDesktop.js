@@ -1,44 +1,68 @@
-import React, {useState, useRef, useEffect} from 'react'; 
+import React, {useState, useRef, useEffect, useContext} from 'react'; 
+import { Link } from "react-router-dom";
 import gsap from 'gsap';
-import styles from '@components/desktop/style/SearchDesktop.module.scss';
 import clsx from 'clsx';
+import { SpotifyContext } from '@components/SpotifyProvider';
+import styles from '@components/desktop/style/SearchDesktop.module.scss';
 
 import MobileThinLine from '@components/mobile/MobileThinLine';
 
+
 const SearchDesktop = () => {
 
+  const { spotifyApi } = useContext(SpotifyContext);
 	const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
-	const [isResultContentOpen, setIsResultContentOpen] = useState(false);
+	const [isResultsContentOpen, setIsResultsContentOpen] = useState(false);
+	const [artists, setArtists] = useState();
+	const [albums, setAlbums] = useState();
+	const [tracks, setTracks] = useState();
 	const searchBar = useRef(null);
 	const textInput = useRef(null);
-	const resultContent = useRef(null);
+	const resultsContent = useRef(null);
+	const regexText = /^(?=.*[A-Za-z1-9$@$!%*#=+^?&"'])/;
 
-	//(?=.*[A-Za-z]).text(textInput.current.value)
-	const regexText = /^(?=.*[A-Za-z1-9$@$!%*#=+\(\)\^?&"'])/;
-
-	const showResults = () => {
-		if (isSearchBarOpen && !isResultContentOpen && !!textInput.current.value.match(regexText)) {
-			gsap.to(resultContent.current, .3, {
+	const showResultsSection = () => {
+		if (isSearchBarOpen && !isResultsContentOpen && !!textInput.current.value.match(regexText)) {
+			gsap.to(resultsContent.current, .3, {
 				display: 'block',
 				height: '200px',
 			});
-			setIsResultContentOpen(true);
-		} else if (isResultContentOpen && !textInput.current.value.match(regexText)) {
-			gsap.to(resultContent.current, .3, {
+			setIsResultsContentOpen(true);
+		} else if (isResultsContentOpen && !textInput.current.value.match(regexText)) {
+			gsap.to(resultsContent.current, .3, {
 				display: 'none',
 				height: 0,
 			});
-			setIsResultContentOpen(false);
+			setIsResultsContentOpen(false);
 		}
 	}
 
-  //pb isSearchBarOpen ne change qu'après la fonction executée ?????
+	const getArtists = async () => {
+		if (isResultsContentOpen) {
+			const result = await spotifyApi.searchArtists(textInput.current.value, {limit: 3});
+			setArtists(result.artists.items);
+		}
+	};
+
+	const getAlbums = async () => {
+		if (isResultsContentOpen) {
+			const result = await spotifyApi.searchAlbums(textInput.current.value, {limit: 3});
+			setAlbums(result.albums.items);
+		}
+	};
+
+		const getTracks = async () => {
+		if (isResultsContentOpen) {
+			const result = await spotifyApi.searchTracks(textInput.current.value, {limit: 3});
+			setTracks(result.tracks.items);
+		}
+	};
 
   useEffect(() => {
 		const openSearchBar = () => {
   		let tl = gsap.timeline();
   		tl.to(searchBar.current, .4, {
-  			width: '50vw',
+  			width: 'calc(100vw - 220px)',
   		})
 			.to(textInput.current, {
   			display: 'inline',
@@ -47,8 +71,8 @@ const SearchDesktop = () => {
 
 		const closeSearchBar = () => {
   		let tl = gsap.timeline();
-  		if (isResultContentOpen) {
-	  		tl.to(resultContent.current, .2, {
+  		if (isResultsContentOpen) {
+	  		tl.to(resultsContent.current, .2, {
 	  			height: 0,
 	  			display: 'none',
 	  		})
@@ -59,7 +83,7 @@ const SearchDesktop = () => {
   		.to(searchBar.current, .4, {
   			width: '20vw',
   		})
-  		setIsResultContentOpen(false)
+  		setIsResultsContentOpen(false)
   	}
 
 		const toggleSearchBar = () => {
@@ -71,7 +95,7 @@ const SearchDesktop = () => {
 		}
 
   	toggleSearchBar();
-  },[isSearchBarOpen, isResultContentOpen, setIsResultContentOpen])
+  },[isSearchBarOpen, isResultsContentOpen, setIsResultsContentOpen])
 
 	return (
 		<div className={ clsx(styles.searchDesktop, styles.greyLight)} >
@@ -80,13 +104,67 @@ const SearchDesktop = () => {
 					<button onClick={() => setIsSearchBarOpen(!isSearchBarOpen)}
 									className={ clsx(styles.greyLight)}
 					>
-							Search
+							Rechercher
 					</button>	
-					<input onChange={() => showResults()}ref={textInput} className={styles.greyLight} type="text" placeholder="Search.."/>	
+					<input onChange={() => {
+															showResultsSection();
+															getArtists();
+															getAlbums();
+															getTracks();
+													}
+									}
+						ref={textInput} className={styles.greyLight} type="text" placeholder="un artist, un morceau, un album..."/>	
 				</div>
 				<MobileThinLine/>	
 			</div>
-			<div ref={resultContent} className={ styles.result}>
+			<div ref={resultsContent} className={ clsx(styles.results) }>
+				<ul>
+
+					{artists && 
+						<li>
+							<p className={ clsx(styles.title2)} >Artists</p>
+								<ul>
+									{ artists.map((artist) => {
+										return (
+												<li key={artist.id}>
+													<Link to={`/artist/${artist.id}`}>{artist.name}</Link>
+												</li>
+											)
+									})}
+								</ul>
+						</li>
+					}
+
+					{albums && 
+						<li>
+							<p className={ clsx(styles.title2)} >Albums</p>
+							<ul>
+								{ albums.map((album) => {
+									return (
+											<li key={album.id}>
+												<Link to={`/album/${album.id}`}>{album.name}</Link>
+											</li>
+										)
+								})}
+							</ul>
+						</li>
+					}
+
+					{tracks && 
+						<li>
+							<p className={ clsx(styles.title2)} >Morceaux</p>
+							<ul>
+								{ tracks.map((track) => {
+									return (
+											<li key={track.id}>
+												<Link to={`/album/${track.album.id}`}>{track.name}</Link>
+											</li>
+										)
+								})}
+							</ul>
+						</li>
+					}
+				</ul>
 				
 			</div>
 		</div>
