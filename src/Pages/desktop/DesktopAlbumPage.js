@@ -26,37 +26,24 @@ const DesktopAlbumPage = (props) => {
   														tracklist: [], 
   														name: null,
   														img: null,
-  														artist: null,
+  														artists: null,
   														date: ""});
 
 //RAM : "4m2880jivSbbyEGAKfITCa"
 //daft : "4tZwfgrHOc3mvqYlEYSvVi"
 
   useEffect(() => {
-  let artistID ="";
-  let albumID ="";
-  	const searchArtist = async () => {
-  		const result = await spotifyApi.searchArtists(params.id, {limit: 1})
-  		artistID = result.artists.items[0].id;
-  		console.log(result);
-  		searchAlbum();
-  	};
-  	const searchAlbum = async () => {
-  		const result = await spotifyApi.getArtistAlbums(artistID, {limit: 1});
-  		albumID = result.items[0].id;
-  		loadAlbum();
-  	};
-    const loadAlbum = async () => {
-      const result = await spotifyApi.getAlbum(albumID)
+    const getAlbum = async () => {
+      const result = await spotifyApi.getAlbum(params.id)
       setAlbum({
 				tracklist: result.tracks.items, 
 				name: result.name,
 				img: result.images[1].url,
-				artist:	result.artists[0].name,
+				artists:	result.artists,
 				date: result.release_date
       });
     }
-    searchArtist();
+    getAlbum();
   }, [spotifyApi, params])
 
 	return (
@@ -90,12 +77,9 @@ const DesktopAlbumPage = (props) => {
 							<li key={index}>
 								<AlbumTracklist 
 									nb={index} 
+									uri={track.uri}
 									title={track.name} 
-									artist={track.artists.map((artist, index) => {
-										return (
-											artist.name
-										)
-									})}
+									artists={track.artists}
 									duration={msToHMS(track.duration_ms)} 
 									gridClass={ styles.gridTrackList }
 								/>

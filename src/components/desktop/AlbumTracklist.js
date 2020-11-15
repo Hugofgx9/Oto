@@ -28,10 +28,10 @@ const AlbumTracklist = (props) => {
 			<span onClick={ () => {playSound(uri)} } className={ clsx(styles.trackTitle) }> { title } </span>
 
 			{artists && 
-				<div>
+				<div className={ clsx(styles.trackArtist) }>
 					{artists.map((artist) => {
 						return (
-							<Link key={artist.id} to={`/artist/${artist.id}`} className={ clsx(styles.trackArtist) }> { artist.name }</Link>
+							<Link key={artist.id} to={`/artist/${artist.id}`}> { artist.name }</Link>
 						)
 					})}	
 				</div>

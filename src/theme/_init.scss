@@ -17,7 +17,15 @@ body{
 a{
   text-decoration: none;
   color: inherit;
+  overflow: hidden;
+  transition: all .5s ease;
+
+  &:hover {
+  color: $blue;
+  border-color: rgba(0,0,0,1);
+  }
 }
+
 
 button {
   border: none;
@@ -26,6 +34,16 @@ button {
 
 button:focus {
   outline: 0;
+}
+
+input[type=text]{
+  border: none;
+  background-color: transparent;
+
+  &:focus {
+    outline: 0;
+  }
+
 }
 
 .title{

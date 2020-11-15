@@ -2,9 +2,11 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 150px auto;
-    justify-content: right;
-    align-items: center;
+    justify-items: right;
     background-color: $grey2;
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 100%;
 
     .playedImg {
         height: 150px;
@@ -16,6 +18,7 @@
         grid-column: 1;
         grid-row: 2;
         text-align: left;
+
 
         // .like{
         //     height: 20px;

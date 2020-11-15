@@ -61,7 +61,7 @@ const DesktopArtistPage = (props) => {
 						<div className = {styles.releaseAndTrackSection} >
 							<div className = {styles.lastRelease} >
 								<div className = {clsx(styles.corps, styles.albumArtistPage)}>
-									<LastReleaseArtistPage name={albums[0].name} artist={artist.name} img={albums[0].images[0].url}/>
+									<LastReleaseArtistPage id={albums[0].id} name={albums[0].name} artist={artist.name} img={albums[0].images[0].url}/>
 								</div>
 							</div>
 								
@@ -73,7 +73,7 @@ const DesktopArtistPage = (props) => {
 									{ topTracks.slice(0,9).map((track, index) => {
 											return (
 												<li key={track.id} className= {styles.greyLight}>
-													<TopTitleArtistPage title={track.name.slice(0,18) + '...'} img={track.album.images[2].url}/>
+													<TopTitleArtistPage title={track.name.slice(0,8) + '...'} id={track.album.id} img={track.album.images[2].url}/>
 												</li>
 											)
 										})
@@ -91,7 +91,7 @@ const DesktopArtistPage = (props) => {
 									{ albums.map((album) => {
 											return(
 												<li key={album.id}>
-													<AlbumArtistPage name={album.name} year="" img={album.images[1].url}/>
+													<AlbumArtistPage id={album.id} name={album.name} year="" img={album.images[1].url}/>
 												</li>
 											)
 										}

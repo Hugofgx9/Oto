@@ -1,0 +1,42 @@
+.searchDesktop {
+	margin-left: calc(#{$LM-width});
+	padding-left: $margin;
+
+	.bar {
+		.barContent {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		button {
+			margin-right: 10px;
+		}
+		input {
+			display: none;
+			width: 50vw;
+		}
+	}
+
+	.results {
+		height: 0px;
+		//height: 100px;
+		width: calc(100% - 30px);
+		overflow-y: scroll; 
+		background-color: $blue;
+		display: none;
+
+		.resultsContainer {
+			margin-top: 10px;
+			margin-left: 30px;
+			.resultsSection {
+				margin-bottom: 10px;
+
+				li {
+					padding-top: 3px;
+					font-size: 15px;
+					padding-bottom: 3px;
+				}
+			}
+		}
+	}
+}

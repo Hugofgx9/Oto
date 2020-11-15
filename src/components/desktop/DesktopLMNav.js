@@ -17,10 +17,10 @@ const DesktopLMNav = () => {
 						<ul className={ clsx(styles.title2, styles.separation) }>
 							<li>favoris</li>
 							<li>
-								<Link to="/album">albums</Link>
+								albums
 							</li>
 							<li>
-								<Link to="/artist/daft">artistes</Link>
+								artistes
 							</li>
 							<div className={ styles.rectangle }></div>
 						</ul>
