@@ -17,11 +17,15 @@ body{
 a{
   text-decoration: none;
   color: inherit;
+  overflow: hidden;
+  transition: all .5s ease;
+
+  &:hover {
+  color: $blue;
+  border-color: rgba(0,0,0,1);
+  }
 }
 
-a:hover {
-  text-decoration: underline;
-}
 
 button {
   border: none;
