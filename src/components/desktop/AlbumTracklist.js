@@ -9,8 +9,8 @@ import styles from '@components/desktop/style/AlbumTracklist.module.scss';
 const AlbumTracklist = (props) => {
 	const { uri, nb, title, artists, duration, gridClass } = props;
 
-	const { spotifyApi, deviceId, player } = useContext(SpotifyContext);
-	const {setIsPlay, setCurrentlyPlaying, currentlyPlaying} = useContext(PlayerContext);
+	const { spotifyApi, deviceId } = useContext(SpotifyContext);
+	const {setIsPlay} = useContext(PlayerContext);
 
 
   const playSound = (uri) => {
