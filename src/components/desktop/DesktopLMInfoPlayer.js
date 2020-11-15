@@ -1,5 +1,5 @@
 import React, {useState, useContext, useEffect} from 'react';
-import { PlayerContext } from '@src/context/PlayerContext';
+//import { PlayerContext } from '@src/context/PlayerContext';
 import { SpotifyContext } from '@components/SpotifyProvider';
 //import clsx from 'clsx';
 //import { Link } from 'react-router-dom';
@@ -15,7 +15,6 @@ const DesktopLMInfoPlayer = () => {
 
 	useEffect(() => {
 		player.addListener('player_state_changed', ({track_window: { current_track }}) => {
-			console.log('infoPLayer',current_track);
 			setCurrentTrack(current_track);
 		})
 	},[player])
