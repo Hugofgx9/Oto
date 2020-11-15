@@ -17,13 +17,17 @@ const DesktopArtistPage = (props) => {
 	const [topTracks, setTopTracks] = useState();
 
 	const { spotifyApi } = useContext(SpotifyContext);
-
+	
 	useEffect(() => {
-		const searchArtists = async (artistQuery) => {
-			const results = await spotifyApi.searchArtists(artistQuery, {limit: 1});
-			return results.artists.items;
-		};
-		const getArtistTopTracks = async (artistID) => {
+		// const searchArtists = async (artistQuery) => {
+		// 	const results = await spotifyApi.searchArtists(artistQuery, {limit: 1});
+		// 	return results.artists.items;
+		// };
+		const getArtist = async (artistID) => {
+			const result = await spotifyApi.getArtist(artistID);
+			return result
+		}
+		const getTopTracks = async (artistID) => {
 			const result = await spotifyApi.getArtistTopTracks(artistID, 'FR');
 			return result.tracks;
 		};		
@@ -32,13 +36,13 @@ const DesktopArtistPage = (props) => {
 			return result.items;
 		};
 		const getSpotifyData = async () => {
-			const artists = await searchArtists(params.id);
-			const albums = await searchArtistAlbums(artists[0].id);
-			const topTracks = await getArtistTopTracks(artists[0].id);
-			console.log(topTracks);
+			//const artists = await searchArtists(params.id);
+			const artist = await getArtist(params.id);
+			const albums = await searchArtistAlbums(params.id);
+			const topTracks = await getTopTracks(artist.id);
 			setTopTracks(topTracks);
 			setAlbums(albums);
-			setArtist(artists[0]);
+			setArtist(artist);
 		};
 		getSpotifyData();
 	}, [spotifyApi, params])
