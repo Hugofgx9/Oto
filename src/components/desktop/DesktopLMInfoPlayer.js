@@ -9,23 +9,23 @@ import styles from '@components/desktop/style/DesktopLMInfoPlayer.module.scss';
 
 const DesktopLMInfoPlayer = () => {
 
-	const {player} = useContext(SpotifyContext);
+	const {spotifyApi, player} = useContext(SpotifyContext);
 	const [currentTrack, setCurrentTrack] = useState();
 
-
 	useEffect(() => {
+
+
 		player.addListener('player_state_changed', ({track_window: { current_track }}) => {
 			setCurrentTrack(current_track);
 		})
-	},[player])
 
-
+	},[player, spotifyApi])
 
 	return (
 			<div >
 				{currentTrack && 
 					<div className={ styles.gridLMInfo }>
-						
+
 						<img className={ styles.playedImg } src={currentTrack.album.images[0].url} alt=""/>
 						<div className={ styles.playedTrack }>
 							<h2 className={ styles.corpsTitle }>

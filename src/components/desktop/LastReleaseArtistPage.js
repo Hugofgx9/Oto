@@ -1,9 +1,10 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import styles from '@components/desktop/style/LastReleaseArtistPage.module.scss';
 import clsx from 'clsx'
 
 const LastReleaseArtistPage = (props) => {
-	const { artist, name, img } = props;
+	const { id, artist, name, img } = props;
 
 	return (
 			<div className = {styles.LastReleaseArtistPage} >
@@ -12,8 +13,10 @@ const LastReleaseArtistPage = (props) => {
 							Dernière sortie
 					</h2>
 
-					<img className = {styles.CoverLastRelease} 
-					src={img} alt=""/>
+					<Link  to={`/album/${id}`} className = {styles.CoverLastRelease}>
+						<img   src={img} alt=""/>
+					</Link>
+
 					
 					<span className = {clsx(styles.corpsTitle, styles.TitleLastRelease)}>
 						{name}

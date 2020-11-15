@@ -1,7 +1,6 @@
 .searchDesktop {
-	position: absolute;
-	left: $LM-width;
-	top: 0;
+	margin-left: calc(#{$LM-width});
+	padding-left: $margin;
 
 	.bar {
 		.barContent {
@@ -14,17 +13,30 @@
 		}
 		input {
 			display: none;
-			width: 60vw;
+			width: 50vw;
 		}
 	}
 
 	.results {
 		height: 0px;
 		//height: 100px;
-		width: 100%;
+		width: calc(100% - 30px);
+		overflow-y: scroll; 
 		background-color: $blue;
-		display:none;
+		display: none;
+
+		.resultsContainer {
+			margin-top: 10px;
+			margin-left: 30px;
+			.resultsSection {
+				margin-bottom: 10px;
+
+				li {
+					padding-top: 3px;
+					font-size: 15px;
+					padding-bottom: 3px;
+				}
+			}
+		}
 	}
-
-
 }

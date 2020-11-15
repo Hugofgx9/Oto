@@ -5,10 +5,13 @@
 	grid-template-columns: 2;
 
 	.CoverLastRelease{
-        height: 175px;
-        width: 175px;
 		grid-row: 1/5;
 		grid-column: 1/2;
+
+		img {
+        height: 175px;
+        width: 175px;
+		}
 	}
 	.LastRelease{
         margin-left: 15px;

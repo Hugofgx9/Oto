@@ -26,7 +26,7 @@ const DesktopAlbumPage = (props) => {
   														tracklist: [], 
   														name: null,
   														img: null,
-  														artist: null,
+  														artists: null,
   														date: ""});
 
 //RAM : "4m2880jivSbbyEGAKfITCa"
@@ -39,7 +39,7 @@ const DesktopAlbumPage = (props) => {
 				tracklist: result.tracks.items, 
 				name: result.name,
 				img: result.images[1].url,
-				artist:	result.artists[0].name,
+				artists:	result.artists,
 				date: result.release_date
       });
     }
@@ -79,11 +79,7 @@ const DesktopAlbumPage = (props) => {
 									nb={index} 
 									uri={track.uri}
 									title={track.name} 
-									artist={track.artists.map((artist, index) => {
-										return (
-											artist.name
-										)
-									})}
+									artists={track.artists}
 									duration={msToHMS(track.duration_ms)} 
 									gridClass={ styles.gridTrackList }
 								/>

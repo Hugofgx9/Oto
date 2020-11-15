@@ -62,7 +62,7 @@ const SearchDesktop = () => {
 		const openSearchBar = () => {
   		let tl = gsap.timeline();
   		tl.to(searchBar.current, .4, {
-  			width: 'calc(100vw - 220px)',
+  			width: 'calc(100vw - (220px + 2 * 30px)',
   		})
 			.to(textInput.current, {
   			display: 'inline',
@@ -106,24 +106,26 @@ const SearchDesktop = () => {
 					>
 							Rechercher
 					</button>	
-					<input onChange={() => {
-															showResultsSection();
-															getArtists();
-															getAlbums();
-															getTracks();
-													}
-									}
-						ref={textInput} className={styles.greyLight} type="text" placeholder="un artist, un morceau, un album..."/>	
+					{isSearchBarOpen && 
+						<input onChange={() => {
+																showResultsSection();
+																getArtists();
+																getAlbums();
+																getTracks();
+														}
+										}
+							ref={textInput} className={styles.greyLight} type="text" placeholder="un artist, un morceau, un album..."/>	
+					}
 				</div>
 				<MobileThinLine/>	
 			</div>
 			<div ref={resultsContent} className={ clsx(styles.results) }>
-				<ul>
+				<ul className={styles.resultsContainer}>
 
 					{artists && 
-						<li>
+						<li className={styles.resultsSection}>
 							<p className={ clsx(styles.title2)} >Artists</p>
-								<ul>
+								<ul className={styles.grey1}>
 									{ artists.map((artist) => {
 										return (
 												<li key={artist.id}>
@@ -132,13 +134,14 @@ const SearchDesktop = () => {
 											)
 									})}
 								</ul>
+								<MobileThinLine/>
 						</li>
 					}
 
 					{albums && 
-						<li>
+						<li className={styles.resultsSection}>
 							<p className={ clsx(styles.title2)} >Albums</p>
-							<ul>
+							<ul className={styles.grey1}>
 								{ albums.map((album) => {
 									return (
 											<li key={album.id}>
@@ -147,13 +150,14 @@ const SearchDesktop = () => {
 										)
 								})}
 							</ul>
+							<MobileThinLine/>
 						</li>
 					}
 
 					{tracks && 
-						<li>
+						<li className={styles.resultsSection}>
 							<p className={ clsx(styles.title2)} >Morceaux</p>
-							<ul>
+							<ul className={styles.grey1}>
 								{ tracks.map((track) => {
 									return (
 											<li key={track.id}>
@@ -162,6 +166,7 @@ const SearchDesktop = () => {
 										)
 								})}
 							</ul>
+							<MobileThinLine/>
 						</li>
 					}
 				</ul>

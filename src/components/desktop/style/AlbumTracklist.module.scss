@@ -6,15 +6,20 @@
 		&.trackTitle {
 			color: $greyLight;
 			cursor: pointer;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 
-		&.trackArtist {
-			justify-self: end;
-		}
 
 		&.trackDuration {
 			grid-column: 5;
 			justify-self: end;
 		}
+	}
+	.trackArtist {
+		justify-self: end;
+
 	}
 }
